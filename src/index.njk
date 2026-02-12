@@ -1,27 +1,16 @@
 ---
 layout: base.njk
 title: Home
-description: "Mitria is a small-scale travel company built on genuine connections with communities across South and Southeast Asia."
-heroImage: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80"
-heroTitle: "Travel with purpose."
-heroSubtitle: "Custom journeys and community-led projects across South and Southeast Asia."
-aboutHeading: "Built on genuine connections"
-aboutText1: "We're a small-scale travel company tired of mass-tourism. We believe travel should feel personal, respectful, and constructive. Every journey with us is custom-tailored and almost all of the profit is reinvested into community-led projects."
-aboutText2: "We're committed to ending exploitative practices like elephant riding and poverty tourism. Your money has an impact even after your trip is finished."
-aboutImage: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&q=80"
-volHeading: "Give back while you travel"
-volText: "We connect travelers with trusted, ethical volunteer opportunities across Asia. From community infrastructure to conservation, we match you with organizations that produce measurable outcomes rather than feel-good photo ops."
-volImage: "https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=800&q=80"
 permalink: /
 showCta: true
 ---
 
 <section class="hero">
-  <img src="{{ heroImage }}" alt="Southeast Asia landscape" class="hero__image">
+  <img src="{{ home.heroImage }}" alt="Southeast Asia landscape" class="hero__image">
   <div class="hero__overlay"></div>
   <div class="hero__content">
-    <h1>{{ heroTitle }}</h1>
-    <p>{{ heroSubtitle }}</p>
+    <h1>{{ home.heroTitle }}</h1>
+    <p>{{ home.heroSubtitle }}</p>
   </div>
 </section>
 
@@ -30,13 +19,13 @@ showCta: true
     <div class="split">
       <div class="split__text">
         <span class="section-label">Who We Are</span>
-        <h2>{{ aboutHeading }}</h2>
-        <p>{{ aboutText1 }}</p>
-        <p>{{ aboutText2 }}</p>
+        <h2>{{ home.aboutHeading }}</h2>
+        <p>{{ home.aboutText1 }}</p>
+        <p>{{ home.aboutText2 }}</p>
         <a href="/about/" class="btn--text">Learn about our story</a>
       </div>
       <div class="split__image">
-        <img src="{{ aboutImage }}" alt="Community gathering">
+        <img src="{{ home.aboutImage }}" alt="Community gathering">
       </div>
     </div>
   </div>
@@ -71,12 +60,12 @@ showCta: true
     <div class="split split--reverse">
       <div class="split__text">
         <span class="section-label">Volunteering</span>
-        <h2>{{ volHeading }}</h2>
-        <p>{{ volText }}</p>
+        <h2>{{ home.volHeading }}</h2>
+        <p>{{ home.volText }}</p>
         <a href="/experiences/" class="btn--text">Learn more</a>
       </div>
       <div class="split__image">
-        <img src="{{ volImage }}" alt="Volunteering">
+        <img src="{{ home.volImage }}" alt="Volunteering">
       </div>
     </div>
   </div>

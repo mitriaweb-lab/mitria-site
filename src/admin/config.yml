@@ -7,7 +7,6 @@ public_folder: "/images"
 
 collections:
 
-  # ─── EXPERIENCES ──────────────────────────────
   - name: "experiences"
     label: "Experiences"
     folder: "src/experiences"
@@ -22,7 +21,6 @@ collections:
       - { label: "Display Order", name: "order", widget: "number", value_type: "int", default: 10 }
       - { label: "Full Description", name: "body", widget: "markdown" }
 
-  # ─── PROJECTS ─────────────────────────────────
   - name: "projects"
     label: "Projects"
     folder: "src/projects"
@@ -36,7 +34,6 @@ collections:
       - { label: "Display Order", name: "order", widget: "number", value_type: "int", default: 10 }
       - { label: "Full Description", name: "body", widget: "markdown" }
 
-  # ─── BLOG POSTS ───────────────────────────────
   - name: "blog"
     label: "Blog Posts"
     folder: "src/blog"
@@ -51,7 +48,6 @@ collections:
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
 
-  # ─── COUNTRIES ────────────────────────────────
   - name: "countries"
     label: "Countries"
     folder: "src/countries"
@@ -113,21 +109,15 @@ collections:
       - { label: "CTA Title", name: "ctaTitle", widget: "string", default: "Let us build you a custom itinerary" }
       - { label: "CTA Text", name: "ctaText", widget: "string", default: "Tell us what interests you and we'll design something personal." }
 
-  # ─── SITE PAGES (single files) ────────────────
   - name: "pages"
     label: "Pages"
     files:
 
-      # HOME PAGE
       - label: "Home Page"
         name: "home"
-        file: "src/index.njk"
+        file: "src/_data/home.json"
         fields:
-          - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-          - { label: "Title", name: "title", widget: "hidden", default: "Home" }
           - { label: "Description", name: "description", widget: "string" }
-          - { label: "Permalink", name: "permalink", widget: "hidden", default: "/" }
-          - { label: "Show CTA", name: "showCta", widget: "hidden", default: true }
           - { label: "Hero Image", name: "heroImage", widget: "image" }
           - { label: "Hero Title", name: "heroTitle", widget: "string" }
           - { label: "Hero Subtitle", name: "heroSubtitle", widget: "string" }
@@ -138,17 +128,12 @@ collections:
           - { label: "Volunteering Heading", name: "volHeading", widget: "string" }
           - { label: "Volunteering Text", name: "volText", widget: "text" }
           - { label: "Volunteering Image", name: "volImage", widget: "image" }
-          - { label: "Body", name: "body", widget: "hidden" }
 
-      # ABOUT PAGE
       - label: "About Page"
         name: "about"
-        file: "src/about.njk"
+        file: "src/_data/about.json"
         fields:
-          - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-          - { label: "Title", name: "title", widget: "hidden", default: "About Mitria" }
           - { label: "Description", name: "description", widget: "string" }
-          - { label: "Permalink", name: "permalink", widget: "hidden", default: "/about/" }
           - { label: "Hero Image", name: "heroImage", widget: "image" }
           - { label: "Story Heading", name: "storyHeading", widget: "string" }
           - { label: "Story Paragraph 1", name: "storyText1", widget: "text" }
@@ -156,9 +141,7 @@ collections:
           - { label: "Story Paragraph 3", name: "storyText3", widget: "text" }
           - { label: "Story Image", name: "storyImage", widget: "image" }
           - { label: "What We Do Text", name: "whatWeDoText", widget: "text" }
-          - { label: "Body", name: "body", widget: "hidden" }
 
-      # SITE SETTINGS
       - label: "Site Settings"
         name: "settings"
         file: "src/_data/site.json"
