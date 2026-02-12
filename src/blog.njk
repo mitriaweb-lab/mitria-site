@@ -1,0 +1,12 @@
+---
+layout: base.njk
+pageTitle: "Blog"
+permalink: "/blog/"
+---
+<section class="hero hero--short"><img src="https://images.unsplash.com/photo-1510797215324-95aa89f43c33?w=1600&q=80" alt="Mountains" class="hero__image"><div class="hero__overlay"></div><div class="hero__content"><h1>Blog</h1></div></section>
+<section class="section"><div class="container"><div class="card-grid card-grid--2">
+{% for post in collections.posts %}
+<a href="{{ post.url }}" class="card">{% if post.data.image %}<img src="{{ post.data.image }}" alt="{{ post.data.title }}" class="card__image">{% endif %}<div class="card__body">{% if post.data.category %}<span class="card__location">{{ post.data.category }}</span>{% endif %}<h3>{{ post.data.title }}</h3><p>{{ post.data.summary }}</p></div></a>
+{% endfor %}
+</div></div></section>
+<section class="subscribe"><div class="container"><p>Subscribe for the latest updates on our trips and work.</p><form class="subscribe__form" name="blog-subscribe" method="POST" data-netlify="true"><input type="email" name="email" placeholder="Your email" required><button type="submit" class="btn btn--primary">Subscribe</button></form></div></section>

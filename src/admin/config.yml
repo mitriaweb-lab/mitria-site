@@ -1,0 +1,170 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/images"
+public_folder: "/images"
+
+collections:
+
+  # ─── EXPERIENCES ──────────────────────────────
+  - name: "experiences"
+    label: "Experiences"
+    folder: "src/experiences"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Location", name: "location", widget: "string", hint: "e.g. Chiang Mai, Thailand" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Summary", name: "summary", widget: "text", hint: "Short description for cards (1-2 sentences)" }
+      - { label: "Note", name: "note", widget: "string", required: false, hint: "Optional italicized note (e.g. where proceeds go)" }
+      - { label: "Display Order", name: "order", widget: "number", value_type: "int", default: 10 }
+      - { label: "Full Description", name: "body", widget: "markdown" }
+
+  # ─── PROJECTS ─────────────────────────────────
+  - name: "projects"
+    label: "Projects"
+    folder: "src/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Location", name: "location", widget: "string", hint: "e.g. Krabi, Thailand" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Summary", name: "summary", widget: "text", hint: "Short description for cards" }
+      - { label: "Display Order", name: "order", widget: "number", value_type: "int", default: 10 }
+      - { label: "Full Description", name: "body", widget: "markdown" }
+
+  # ─── BLOG POSTS ───────────────────────────────
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "src/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post.njk" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Category", name: "category", widget: "string", hint: "e.g. Animal Welfare, Project Zomia" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Summary", name: "summary", widget: "text", hint: "Short description for the blog listing" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # ─── COUNTRIES ────────────────────────────────
+  - name: "countries"
+    label: "Countries"
+    folder: "src/countries"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "country.njk" }
+      - { label: "Country Name", name: "title", widget: "string" }
+      - { label: "Hero Image", name: "image", widget: "image" }
+      - { label: "Display Order", name: "order", widget: "number", value_type: "int", default: 10 }
+      - { label: "Short Hero", name: "short", widget: "boolean", default: false }
+      - label: "URL Path"
+        name: "permalink"
+        widget: "string"
+        hint: "e.g. /countries/thailand/"
+      - { label: "Overview (body text)", name: "body", widget: "markdown" }
+      - label: "Projects"
+        name: "projects"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Location", name: "location", widget: "string", required: false }
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Description", name: "description", widget: "text" }
+      - label: "Experiences"
+        name: "experiences"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Region", name: "region", widget: "string", required: false }
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Summary", name: "summary", widget: "text" }
+      - label: "Volunteering Opportunities"
+        name: "volunteering"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Image", name: "image", widget: "image", required: false }
+          - { label: "Description", name: "description", widget: "text" }
+      - label: "Friends & Partners"
+        name: "friends"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Image", name: "image", widget: "image", required: false }
+          - { label: "Description", name: "description", widget: "text" }
+      - { label: "Travel Tips", name: "travelTips", widget: "text", required: false, hint: "Dos and don'ts paragraph" }
+      - label: "Seasons"
+        name: "seasons"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Season Name", name: "name", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+      - { label: "CTA Title", name: "ctaTitle", widget: "string", default: "Let us build you a custom itinerary" }
+      - { label: "CTA Text", name: "ctaText", widget: "string", default: "Tell us what interests you and we'll design something personal." }
+
+  # ─── SITE PAGES (single files) ────────────────
+  - name: "pages"
+    label: "Pages"
+    files:
+
+      # HOME PAGE
+      - label: "Home Page"
+        name: "home"
+        file: "src/index.njk"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
+          - { label: "Title", name: "title", widget: "hidden", default: "Home" }
+          - { label: "Description", name: "description", widget: "string" }
+          - { label: "Permalink", name: "permalink", widget: "hidden", default: "/" }
+          - { label: "Show CTA", name: "showCta", widget: "hidden", default: true }
+          - { label: "Hero Image", name: "heroImage", widget: "image" }
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "string" }
+          - { label: "About Heading", name: "aboutHeading", widget: "string" }
+          - { label: "About Paragraph 1", name: "aboutText1", widget: "text" }
+          - { label: "About Paragraph 2", name: "aboutText2", widget: "text" }
+          - { label: "About Image", name: "aboutImage", widget: "image" }
+          - { label: "Volunteering Heading", name: "volHeading", widget: "string" }
+          - { label: "Volunteering Text", name: "volText", widget: "text" }
+          - { label: "Volunteering Image", name: "volImage", widget: "image" }
+          - { label: "Body", name: "body", widget: "hidden" }
+
+      # ABOUT PAGE
+      - label: "About Page"
+        name: "about"
+        file: "src/about.njk"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
+          - { label: "Title", name: "title", widget: "hidden", default: "About Mitria" }
+          - { label: "Description", name: "description", widget: "string" }
+          - { label: "Permalink", name: "permalink", widget: "hidden", default: "/about/" }
+          - { label: "Hero Image", name: "heroImage", widget: "image" }
+          - { label: "Story Heading", name: "storyHeading", widget: "string" }
+          - { label: "Story Paragraph 1", name: "storyText1", widget: "text" }
+          - { label: "Story Paragraph 2", name: "storyText2", widget: "text" }
+          - { label: "Story Paragraph 3", name: "storyText3", widget: "text" }
+          - { label: "Story Image", name: "storyImage", widget: "image" }
+          - { label: "What We Do Text", name: "whatWeDoText", widget: "text" }
+          - { label: "Body", name: "body", widget: "hidden" }
+
+      # SITE SETTINGS
+      - label: "Site Settings"
+        name: "settings"
+        file: "src/_data/site.json"
+        fields:
+          - { label: "Site Name", name: "name", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Facebook URL", name: "facebook", widget: "string" }
+          - { label: "Instagram URL", name: "instagram", widget: "string" }

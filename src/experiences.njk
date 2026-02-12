@@ -1,0 +1,14 @@
+---
+layout: base.njk
+pageTitle: "Experiences"
+permalink: "/experiences/"
+---
+<section class="hero hero--short"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1600&q=80" alt="Rice terraces" class="hero__image"><div class="hero__overlay"></div><div class="hero__content"><h1>Experiences</h1><p>Trips built around the people and places that make them worth taking.</p></div></section>
+<section class="section"><div class="container"><div class="section-heading"><span class="section-label">Our Trips</span><h2>Community-based experiences</h2></div>
+{% for exp in collections.experiences %}
+<div class="split{% if loop.index % 2 == 0 %} split--reverse{% endif %}" {% if not loop.last %}style="margin-bottom:var(--space-2xl);"{% endif %}><div class="split__image"><img src="{{ exp.data.image }}" alt="{{ exp.data.title }}"></div><div class="split__text"><span class="card__location">{{ exp.data.location }}, {{ exp.data.country }}</span><h3>{{ exp.data.title }}</h3>{{ exp.content | safe }}</div></div>
+{% endfor %}
+</div></section>
+<section class="section section--alt"><div class="container"><div class="split split--reverse"><div class="split__text"><span class="section-label">Volunteer Placement</span><h2>Give back while you travel</h2><p>We connect you with trusted, ethical volunteer opportunities across Asia.</p><a href="/contact/" class="btn--text">Get in touch</a></div><div class="split__image"><img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=800&q=80" alt="Volunteering"></div></div></div></section>
+<section class="section"><div class="container"><div class="split"><div class="split__image"><img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80" alt="Planning"></div><div class="split__text"><span class="section-label">Custom Itineraries</span><h2>Your trip, your way</h2><p>Reach out and we'll give you a call to discuss your ideas for free. No strings attached.</p><a href="/contact/" class="btn--text">Start planning</a></div></div></div></section>
+<section class="cta-banner"><h2>Let's plan something meaningful</h2><a href="/contact/" class="btn btn--outline">Get in Touch</a></section>

@@ -1,0 +1,101 @@
+---
+layout: base.njk
+---
+
+<section class="hero{% if short %} hero--short{% endif %}">
+  <img src="{{ image }}" alt="{{ title }}" class="hero__image">
+  <div class="hero__overlay"></div>
+  <div class="hero__content"><h1>{{ title }}</h1></div>
+</section>
+
+<section class="section">
+  <div class="container container--narrow">
+    {{ content | safe }}
+  </div>
+</section>
+
+{% if projects and projects.length %}
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-heading"><span class="section-label">Our Projects in {{ title }}</span></div>
+    {% for project in projects %}
+    <div class="split{% if loop.index % 2 == 0 %} split--reverse{% endif %}"{% if not loop.last %} style="margin-bottom: var(--space-2xl);"{% endif %}>
+      <div class="split__image"><img src="{{ project.image }}" alt="{{ project.name }}"></div>
+      <div class="split__text">
+        <h3>{{ project.name }}</h3>
+        {% if project.location %}<span class="text-muted" style="font-size:0.88rem;display:block;margin-bottom:0.75rem;">{{ project.location }}</span>{% endif %}
+        <p>{{ project.description }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% if experiences and experiences.length %}
+<section class="section">
+  <div class="container">
+    <div class="section-heading"><span class="section-label">Experiences in {{ title }}</span></div>
+    <div class="card-grid card-grid--2">
+      {% for exp in experiences %}
+      <a href="/experiences/" class="card">
+        <img src="{{ exp.image }}" alt="{{ exp.name }}" class="card__image">
+        <div class="card__body">
+          {% if exp.region %}<span class="card__location">{{ exp.region }}</span>{% endif %}
+          <h3>{{ exp.name }}</h3>
+          <p>{{ exp.summary }}</p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if volunteering and volunteering.length %}
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-heading"><span class="section-label">Volunteering Opportunities</span></div>
+    <div class="card-grid card-grid--2" style="max-width:700px;">
+      {% for vol in volunteering %}
+      <div class="partner-card">
+        {% if vol.image %}<img src="{{ vol.image }}" alt="{{ vol.name }}" class="partner-card__image">{% endif %}
+        <h4>{{ vol.name }}</h4>
+        <p>{{ vol.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if friends and friends.length %}
+<section class="section">
+  <div class="container">
+    <div class="section-heading"><span class="section-label">Our Friends in {{ title }}</span></div>
+    <div class="card-grid card-grid--3">
+      {% for friend in friends %}
+      <div class="partner-card">
+        {% if friend.image %}<img src="{{ friend.image }}" alt="{{ friend.name }}" class="partner-card__image">{% endif %}
+        <h4>{{ friend.name }}</h4>
+        <p>{{ friend.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if seasons and seasons.length %}
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-heading"><span class="section-label">Travel Guide</span><h2>When to visit {{ title }}</h2></div>
+    {% if travelTips %}<div class="container container--narrow" style="margin-bottom:var(--space-lg);padding:0;"><p style="color:var(--color-text-light);font-size:0.95rem;">{{ travelTips }}</p></div>{% endif %}
+    <div class="season-grid">
+      {% for season in seasons %}
+      <div class="season-card"><h4>{{ season.name }}</h4><p>{{ season.description }}</p></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

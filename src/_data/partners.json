@@ -1,0 +1,17 @@
+[
+  {"name":"Jahoo Gibbon Camp","description":"Community-run eco-lodge protecting gibbons in Cambodia's northeastern forests.","image":"https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=600&q=80","country":"Cambodia","featured":true},
+  {"name":"Elephant Care Unchained","description":"Working to free captive elephants and provide ethical alternatives to traditional camps.","image":"https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=600&q=80","country":"Thailand","featured":true},
+  {"name":"Andaman Turtle Watch","description":"Marine conservation and sea turtle monitoring on Thailand's Andaman coast.","image":"https://images.unsplash.com/photo-1591025207163-942350e47db2?w=600&q=80","country":"Thailand","featured":true},
+  {"name":"ChangChill","description":"Ethical elephant observation sanctuary near Chiang Mai.","image":"https://images.unsplash.com/photo-1585409677983-0f6c41ca9c3b?w=600&q=80","country":"Thailand","featured":false},
+  {"name":"Kidthung Cottage","description":"Community-run accommodation supporting local families.","country":"Thailand","featured":false},
+  {"name":"Little Forest","description":"Sustainable living and education in rural Thailand.","country":"Thailand","featured":false},
+  {"name":"Big Brother Mouse","description":"Local non-profit promoting literacy.","country":"Laos","featured":false},
+  {"name":"Laos Buffalo Dairy","description":"Sustainable dairy farm supporting local farmers and community nutrition.","country":"Laos","featured":false},
+  {"name":"Free the Bears","description":"Rescues and cares for bears saved from the wildlife trade.","country":"Laos","featured":false},
+  {"name":"TAEC","description":"Showcases the diverse cultures of Laos' ethnic groups while advocating for their preservation.","country":"Laos","featured":false},
+  {"name":"Paws and Pancakes","description":"Animal welfare café supporting rescue animals in Chitwan.","country":"Nepal","featured":false},
+  {"name":"Honeybee Homestay","description":"Organic homestay supporting local beekeeping in Sauraha.","country":"Nepal","featured":false},
+  {"name":"StandUp4Elephants","description":"Advocating for ethical elephant tourism standards in Nepal.","country":"Nepal","featured":false},
+  {"name":"Elephant Valley Project","description":"Cambodia's pioneering ethical elephant sanctuary in Mondulkiri.","country":"Cambodia","featured":false},
+  {"name":"Phea's Treats","description":"Local social enterprise supporting community livelihoods.","country":"Cambodia","featured":false}
+]

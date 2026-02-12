@@ -1,0 +1,8 @@
+<section class="hero{% if short %} hero--short{% endif %}">
+  <img src="{{ image }}" alt="{{ imageAlt or title }}" class="hero__image">
+  <div class="hero__overlay"></div>
+  <div class="hero__content">
+    <h1>{{ title }}</h1>
+    {% if subtitle %}<p>{{ subtitle }}</p>{% endif %}
+  </div>
+</section>

@@ -1,0 +1,93 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/images"
+public_folder: "/images"
+
+collections:
+  - name: "experiences"
+    label: "Experiences"
+    folder: "src/experiences"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Country", name: "country", widget: "select", options: ["Thailand", "Laos", "Nepal", "Cambodia", "Vietnam", "Malaysia"] }
+      - { label: "Location", name: "location", widget: "string", hint: "City or region" }
+      - { label: "Short Summary", name: "summary", widget: "text" }
+      - { label: "Cover Image", name: "image", widget: "image" }
+      - { label: "Display Order", name: "order", widget: "number", value_type: "int", default: 10 }
+      - { label: "Full Description", name: "body", widget: "markdown" }
+
+  - name: "projects"
+    label: "Projects"
+    folder: "src/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Country", name: "country", widget: "select", options: ["Thailand", "Laos", "Nepal", "Cambodia", "Vietnam", "Malaysia"] }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Cover Image", name: "image", widget: "image" }
+      - { label: "Display Order", name: "order", widget: "number", value_type: "int", default: 10 }
+      - { label: "Description", name: "body", widget: "markdown" }
+
+  - name: "countries"
+    label: "Countries"
+    folder: "src/countries"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Country Name", name: "title", widget: "string" }
+      - { label: "Hero Image", name: "heroImage", widget: "image" }
+      - { label: "Display Order", name: "order", widget: "number", value_type: "int", default: 10 }
+      - { label: "URL Path", name: "permalink", widget: "string", hint: "/thailand/" }
+      - { label: "Travel Tips", name: "travelTips", widget: "text", required: false }
+      - label: "Seasons"
+        name: "seasons"
+        widget: "list"
+        fields:
+          - { label: "Season Name", name: "name", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+      - { label: "Overview Text", name: "body", widget: "markdown" }
+
+  - name: "blog"
+    label: "Blog"
+    folder: "src/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Category", name: "category", widget: "string", required: false }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Cover Image", name: "image", widget: "image", required: false }
+      - { label: "Content", name: "body", widget: "markdown" }
+
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - label: "General"
+        name: "site"
+        file: "src/_data/site.json"
+        fields:
+          - { label: "Site Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "text" }
+          - { label: "Facebook URL", name: "facebook", widget: "string" }
+          - { label: "Instagram URL", name: "instagram", widget: "string" }
+      - label: "Partners"
+        name: "partners"
+        file: "src/_data/partners.json"
+        fields:
+          - label: "Partners List"
+            name: "partners"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Photo", name: "image", widget: "image", required: false }
+              - { label: "Country", name: "country", widget: "select", options: ["Thailand", "Laos", "Nepal", "Cambodia", "Vietnam", "Malaysia"] }
+              - { label: "Featured on Home", name: "featured", widget: "boolean", default: false }

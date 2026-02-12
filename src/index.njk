@@ -1,0 +1,146 @@
+---
+layout: base.njk
+title: Home
+description: "Mitria is a small-scale travel company built on genuine connections with communities across South and Southeast Asia."
+heroImage: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80"
+heroTitle: "Travel with purpose."
+heroSubtitle: "Custom journeys and community-led projects across South and Southeast Asia."
+aboutHeading: "Built on genuine connections"
+aboutText1: "We're a small-scale travel company tired of mass-tourism. We believe travel should feel personal, respectful, and constructive. Every journey with us is custom-tailored and almost all of the profit is reinvested into community-led projects."
+aboutText2: "We're committed to ending exploitative practices like elephant riding and poverty tourism. Your money has an impact even after your trip is finished."
+aboutImage: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&q=80"
+volHeading: "Give back while you travel"
+volText: "We connect travelers with trusted, ethical volunteer opportunities across Asia. From community infrastructure to conservation, we match you with organizations that produce measurable outcomes rather than feel-good photo ops."
+volImage: "https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=800&q=80"
+permalink: /
+showCta: true
+---
+
+<section class="hero">
+  <img src="{{ heroImage }}" alt="Southeast Asia landscape" class="hero__image">
+  <div class="hero__overlay"></div>
+  <div class="hero__content">
+    <h1>{{ heroTitle }}</h1>
+    <p>{{ heroSubtitle }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="split">
+      <div class="split__text">
+        <span class="section-label">Who We Are</span>
+        <h2>{{ aboutHeading }}</h2>
+        <p>{{ aboutText1 }}</p>
+        <p>{{ aboutText2 }}</p>
+        <a href="/about/" class="btn--text">Learn about our story</a>
+      </div>
+      <div class="split__image">
+        <img src="{{ aboutImage }}" alt="Community gathering">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-heading">
+      <span class="section-label">Experiences</span>
+      <h2>Travel your way</h2>
+    </div>
+    <div class="card-grid card-grid--3">
+      {%- for exp in collections.experiences | limit(3) %}
+      <a href="/experiences/" class="card">
+        <img src="{{ exp.data.image }}" alt="{{ exp.data.title }}" class="card__image">
+        <div class="card__body">
+          <span class="card__location">{{ exp.data.location }}</span>
+          <h3>{{ exp.data.title }}</h3>
+          <p>{{ exp.data.summary }}</p>
+        </div>
+      </a>
+      {%- endfor %}
+    </div>
+    <div style="text-align: center; margin-top: var(--space-lg);">
+      <a href="/experiences/" class="btn btn--outline">All Experiences</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="split split--reverse">
+      <div class="split__text">
+        <span class="section-label">Volunteering</span>
+        <h2>{{ volHeading }}</h2>
+        <p>{{ volText }}</p>
+        <a href="/experiences/" class="btn--text">Learn more</a>
+      </div>
+      <div class="split__image">
+        <img src="{{ volImage }}" alt="Volunteering">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-heading">
+      <span class="section-label">Project Zomia</span>
+      <h2>Where your money goes</h2>
+      <p>Nearly all of our profits fund community-driven projects across the region.</p>
+    </div>
+    <div class="card-grid card-grid--3">
+      {%- for proj in collections.projects | limit(3) %}
+      <a href="/projects/" class="card">
+        <img src="{{ proj.data.image }}" alt="{{ proj.data.title }}" class="card__image">
+        <div class="card__body">
+          <span class="card__location">{{ proj.data.location }}</span>
+          <h3>{{ proj.data.title }}</h3>
+        </div>
+      </a>
+      {%- endfor %}
+    </div>
+    <div style="text-align: center; margin-top: var(--space-lg);">
+      <a href="/projects/" class="btn btn--outline">All Projects</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-heading text-center">
+      <span class="section-label">Our Friends</span>
+      <h2>Partners doing good work</h2>
+    </div>
+    <div class="card-grid card-grid--3">
+      <div class="partner-card">
+        <img src="https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=600&q=80" alt="Gibbon" class="partner-card__image">
+        <h4>Jahoo Gibbon Camp</h4>
+        <p>Community-run eco-lodge protecting gibbons in Cambodia's northeastern forests.</p>
+      </div>
+      <div class="partner-card">
+        <img src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=600&q=80" alt="Elephant" class="partner-card__image">
+        <h4>Elephant Care Unchained</h4>
+        <p>Working to free captive elephants and provide ethical alternatives to traditional camps.</p>
+      </div>
+      <div class="partner-card">
+        <img src="https://images.unsplash.com/photo-1591025207163-942350e47db2?w=600&q=80" alt="Sea turtle" class="partner-card__image">
+        <h4>Andaman Turtle Watch</h4>
+        <p>Marine conservation and sea turtle monitoring on Thailand's Andaman coast.</p>
+      </div>
+    </div>
+    <p style="text-align: center; margin-top: var(--space-lg); color: var(--color-text-muted); font-size: 0.92rem;">
+      Check out our <a href="/countries/">country pages</a> for a list of partners and other good folks to visit on your travels.
+    </p>
+  </div>
+</section>
+
+<section class="subscribe">
+  <div class="container">
+    <p>Subscribe for the latest updates on our trips and work.</p>
+    <form class="subscribe__form" name="subscribe" method="POST" data-netlify="true">
+      <input type="email" name="email" placeholder="Your email" required>
+      <button type="submit" class="btn btn--primary">Subscribe</button>
+    </form>
+  </div>
+</section>

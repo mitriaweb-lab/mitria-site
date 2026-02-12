@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if title and title != "Home" %}{{ title }} — {% endif %}{{ site.name }}</title>
+  <meta name="description" content="{{ description or site.tagline }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">mi<span>t</span>ria</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="/about/"{% if page.url == '/about/' %} class="active"{% endif %}>About</a></li>
+        <li><a href="/experiences/"{% if page.url == '/experiences/' %} class="active"{% endif %}>Experiences</a></li>
+        <li><a href="/projects/"{% if page.url == '/projects/' %} class="active"{% endif %}>Projects</a></li>
+        <li><a href="/countries/"{% if '/countries/' in page.url %} class="active"{% endif %}>Countries</a></li>
+        <li><a href="/blog/"{% if '/blog/' in page.url %} class="active"{% endif %}>Blog</a></li>
+        <li><a href="/contact/" class="nav__cta{% if page.url == '/contact/' %} active{% endif %}">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  {{ content | safe }}
+
+  {% if showCta !== false %}
+  <section class="cta-banner">
+    <h2>{{ ctaTitle or "Let's plan something meaningful" }}</h2>
+    <p>{{ ctaText or "Whether you want to join a trip, build a custom itinerary, or get involved in a project, we're here." }}</p>
+    <a href="/contact/" class="btn btn--outline">Get in Touch</a>
+  </section>
+  {% endif %}
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="/" class="nav__logo">mi<span>t</span>ria</a>
+          <p>{{ site.tagline }}</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul class="footer__links">
+            <li><a href="/experiences/">Experiences</a></li>
+            <li><a href="/projects/">Projects</a></li>
+            <li><a href="/countries/">Countries</a></li>
+            <li><a href="/blog/">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer__links">
+            <li><a href="/about/">About Us</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2025 {{ site.name }}. All rights reserved.</span>
+        <div class="footer__social">
+          <a href="{{ site.facebook }}">Facebook</a>
+          <a href="{{ site.instagram }}">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+    document.querySelectorAll('.nav__links a').forEach(l => l.addEventListener('click', () => links.classList.remove('open')));
+    window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('nav--scrolled', window.scrollY > 10));
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) { window.netlifyIdentity.on("login", () => { document.location.href = "/admin/"; }); }
+      });
+    }
+  </script>
+
+</body>
+</html>
