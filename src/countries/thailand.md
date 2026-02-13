@@ -42,7 +42,7 @@ volunteering:
     image: https://images.unsplash.com/photo-1591025207163-942350e47db2?w=600&q=80
     description: Marine conservation and sea turtle monitoring on Thailand's Andaman coast.
   - name: Kindred Spirit
-    image: https://images.unsplash.com/photo-1474511320723-9a56873571b7?w=600&q=80
+    image: /images/paul-kapischka-kb2ixp1tvne-unsplash-1-.jpg
     description: Elephant welfare and community development in northern Thailand.
 friends:
   - name: ChangChill
