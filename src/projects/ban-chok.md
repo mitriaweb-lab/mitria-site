@@ -1,8 +1,9 @@
 ---
-title: "Ban Chok Community Drinking Water System"
-location: "Luang Prabang, Laos"
-image: "https://images.unsplash.com/photo-1504618223053-559bdef9dd5a?w=800&q=80"
-summary: "Repairing and upgrading the village water system with filtration to provide clean water year-round."
+title: Ban Chok Community Drinking Water System
+location: Luang Prabang, Laos
+image: /images/amritanshu-sikdar-lognr-w1d8e-unsplash.jpg
+summary: Repairing and upgrading the village water system with filtration to
+  provide clean water year-round.
 order: 3
 ---
 
