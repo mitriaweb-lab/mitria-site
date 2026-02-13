@@ -1,8 +1,9 @@
 ---
-title: "Ethical Elephants & Karen Culture"
-location: "Chiang Mai, Thailand"
-image: "https://images.unsplash.com/photo-1585409677983-0f6c41ca9c3b?w=800&q=80"
-summary: "Visit a hands-off sanctuary, walk with elephants in the forest, and stay in a Karen village homestay with your mahout guide."
+title: Ethical Elephants & Karen Culture
+location: Chiang Mai, Thailand
+image: /images/img_5936.heic
+summary: Visit a hands-off sanctuary, walk with elephants in the forest, and
+  stay in a Karen village homestay with your mahout guide.
 order: 2
 ---
 
