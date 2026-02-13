@@ -1,8 +1,9 @@
 ---
-title: "Coastal Conservation & Community Life"
-location: "Krabi, Thailand"
-image: "https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=800&q=80"
-summary: "Stay on Koh Klang island, join mangrove restoration, and learn traditional crafts while supporting local conservation efforts."
+title: Coastal Conservation & Community Life
+location: Krabi, Thailand
+image: /images/yada-pongsirirushakun-5s0vfmyp5ti-unsplash.jpg
+summary: Stay on Koh Klang island, join mangrove restoration, and learn
+  traditional crafts while supporting local conservation efforts.
 order: 3
 ---
 
