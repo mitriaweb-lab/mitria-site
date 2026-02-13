@@ -686,7 +686,7 @@ p:last-child {
   inset: 0;
   background-size: cover;
   background-position: center;
-  filter: brightness(0.4) saturate(0.7);
+  filter: brightness(0.25) saturate(0.7);
 }
 
 .commitments-section .container {
@@ -696,10 +696,21 @@ p:last-child {
 
 .commitments-section .section-heading {
   margin-bottom: var(--space-lg);
+  text-align: center;
 }
 
 .commitments-section .section-heading h2 {
   color: var(--color-white);
+  font-size: 2.2rem;
+}
+
+.commitments-section .section-label--light {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.5rem;
 }
 
 .commitments-grid {
@@ -744,40 +755,50 @@ p:last-child {
    ============================================ */
 .season-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-md);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-sm);
 }
 
 .season-card {
   background: var(--color-white);
-  padding: var(--space-lg) var(--space-md);
+  padding: var(--space-md) var(--space-md);
   border-radius: var(--border-radius);
   border: 1px solid var(--color-border);
   text-align: center;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  cursor: default;
+}
+
+.season-card:hover,
+.season-card:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 2px 12px rgba(94, 126, 90, 0.1);
+  outline: none;
 }
 
 .season-card__icon {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
-  margin: 0 auto var(--space-sm);
+  width: 48px;
+  height: 48px;
+  margin: 0 auto var(--space-xs);
   border-radius: 50%;
-  background: var(--color-sage-light, #f0f4ec);
+  background: var(--color-sage-light);
   color: var(--color-primary-dark);
 }
 
 .season-card h4 {
   color: var(--color-primary-dark);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   font-family: var(--font-heading);
+  font-size: 0.95rem;
 }
 
 .season-card p {
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   color: var(--color-text-light);
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
 /* Travel tips callout */
@@ -789,7 +810,7 @@ p:last-child {
   border-left: 3px solid var(--color-primary);
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
   padding: var(--space-md) var(--space-lg);
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-lg);
 }
 
 .travel-tips__icon {
@@ -801,7 +822,7 @@ p:last-child {
 .travel-tips__text {
   font-style: italic;
   color: var(--color-text-light);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   line-height: 1.7;
 }
 
@@ -810,14 +831,26 @@ p:last-child {
   margin-bottom: 0;
 }
 
-/* Page intro - country and project pages below hero */
+/* Page intro text below hero */
 .page-intro {
-  max-width: 780px;
+  max-width: 740px;
   margin: 0 auto;
   text-align: center;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   line-height: 1.85;
   color: var(--color-text);
+  position: relative;
+  padding: var(--space-sm) 0;
+}
+
+.page-intro::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--color-primary);
+  margin: 0 auto var(--space-md);
+  opacity: 0.6;
 }
 
 .page-intro p {
@@ -829,6 +862,60 @@ p:last-child {
   margin-bottom: 0;
 }
 
+/* Quick facts strip */
+.quick-facts {
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-md) 0;
+}
+
+.quick-facts__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.quick-facts__item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.quick-facts__item svg {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.quick-facts__label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-light);
+}
+
+.quick-facts__value {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+/* Experience card action link */
+.card__action {
+  display: inline-block;
+  margin-top: var(--space-xs);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  transition: color 0.2s ease;
+}
+
+.card--experience:hover .card__action {
+  color: var(--color-primary-dark);
+}
+
 @media (max-width: 768px) {
   .travel-tips {
     flex-direction: column;
@@ -836,13 +923,34 @@ p:last-child {
     padding: var(--space-md);
   }
 
+  .season-grid {
+    grid-template-columns: 1fr;
+  }
+
   .season-card {
     padding: var(--space-md);
   }
 
   .page-intro {
-    font-size: 1.05rem;
+    font-size: 1rem;
     text-align: left;
+  }
+
+  .page-intro::before {
+    margin: 0 0 var(--space-md);
+  }
+
+  .quick-facts__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .quick-facts__label {
+    font-size: 0.65rem;
+  }
+
+  .quick-facts__value {
+    font-size: 0.85rem;
   }
 }
 

@@ -42,6 +42,11 @@ seasons:
     description: Monsoon rains bring dramatic skies and vivid greenery. Waterfalls
       in Mondulkiri are at their best. Fewer tourists, slower travel, and more
       authentic local life.
+quickFacts:
+  capital: "Phnom Penh"
+  language: "Khmer"
+  currency: "Riel (KHR)"
+  timezone: "GMT+7"
 ctaTitle: Let us build you a custom itinerary
 ctaText: Tell us what interests you and we'll design something personal for Cambodia.
 ---

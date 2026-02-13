@@ -66,6 +66,12 @@ seasons:
     description: Afternoon rains turn landscapes lush, rivers swell, and fewer
       tourists mean quieter villages. Great for photography and cultural
       immersion.
+travelTips: "Greet with a \"wai\" (palms together, slight bow). Never touch someone's head or point feet at people or images of Buddha. Stand during the royal anthem in cinemas and public events. Remove shoes before entering homes and temples. Cover shoulders and knees at temples. Try street food; it's often better than restaurants."
+quickFacts:
+  capital: "Bangkok"
+  language: "Thai"
+  currency: "Baht (THB)"
+  timezone: "GMT+7"
 ctaTitle: Let us build you a custom itinerary
 ctaText: Tell us what interests you and we'll design something personal for Thailand.
 ---

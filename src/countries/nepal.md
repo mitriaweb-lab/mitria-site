@@ -44,6 +44,11 @@ seasons:
     description: Lush landscapes and fewer tourists, with some rural areas harder to
       access. Excellent for cultural programs and lower-altitude service
       projects.
+quickFacts:
+  capital: "Kathmandu"
+  language: "Nepali"
+  currency: "Rupee (NPR)"
+  timezone: "GMT+5:45"
 ctaTitle: Let us build you a custom itinerary
 ctaText: Tell us what interests you and we'll design something personal for Nepal.
 ---

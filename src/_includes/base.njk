@@ -84,13 +84,44 @@
       const track = carousel.querySelector('.partner-carousel__track');
       const prev = carousel.querySelector('.carousel-btn--prev');
       const next = carousel.querySelector('.carousel-btn--next');
-      const scrollAmt = 320;
-      if (prev) prev.addEventListener('click', () => track.scrollBy({ left: -scrollAmt, behavior: 'smooth' }));
-      if (next) next.addEventListener('click', () => track.scrollBy({ left: scrollAmt, behavior: 'smooth' }));
-      let autoplay = setInterval(() => track.scrollBy({ left: scrollAmt, behavior: 'smooth' }), 5000);
+      const cards = Array.from(track.children);
+      const cardWidth = 300 + 24; // card width + gap
+
+      // Clone all cards and append for seamless loop
+      cards.forEach(card => {
+        const clone = card.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        track.appendChild(clone);
+      });
+
+      const totalOriginal = cards.length * cardWidth;
+
+      // When scroll passes all originals, jump back silently
+      track.addEventListener('scroll', () => {
+        if (track.scrollLeft >= totalOriginal) {
+          track.style.scrollBehavior = 'auto';
+          track.scrollLeft = track.scrollLeft - totalOriginal;
+          track.style.scrollBehavior = 'smooth';
+        } else if (track.scrollLeft <= 0) {
+          track.style.scrollBehavior = 'auto';
+          track.scrollLeft = track.scrollLeft + totalOriginal;
+          track.style.scrollBehavior = 'smooth';
+        }
+      });
+
+      function scrollNext() {
+        track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+      }
+      function scrollPrev() {
+        track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+      }
+
+      if (prev) prev.addEventListener('click', scrollPrev);
+      if (next) next.addEventListener('click', scrollNext);
+      let autoplay = setInterval(scrollNext, 5000);
       carousel.addEventListener('mouseenter', () => clearInterval(autoplay));
       carousel.addEventListener('mouseleave', () => {
-        autoplay = setInterval(() => track.scrollBy({ left: scrollAmt, behavior: 'smooth' }), 5000);
+        autoplay = setInterval(scrollNext, 5000);
       });
     });
     if (window.netlifyIdentity) {

@@ -79,6 +79,7 @@ collections:
         required: false
         fields:
           - { label: "Name", name: "name", widget: "string" }
+          - { label: "Link", name: "link", widget: "string", required: false, hint: "URL to experience page, e.g. /experiences/ethical-elephants/" }
           - { label: "Region", name: "region", widget: "string", required: false }
           - { label: "Image", name: "image", widget: "image" }
           - { label: "Summary", name: "summary", widget: "markdown" }
@@ -98,6 +99,15 @@ collections:
           - { label: "Name", name: "name", widget: "string" }
           - { label: "Image", name: "image", widget: "image", required: false }
           - { label: "Description", name: "description", widget: "markdown" }
+      - label: "Quick Facts"
+        name: "quickFacts"
+        widget: "object"
+        required: false
+        fields:
+          - { label: "Capital", name: "capital", widget: "string" }
+          - { label: "Language", name: "language", widget: "string" }
+          - { label: "Currency", name: "currency", widget: "string" }
+          - { label: "Time Zone", name: "timezone", widget: "string" }
       - { label: "Travel Tips", name: "travelTips", widget: "markdown", required: false, hint: "Dos and don'ts paragraph" }
       - label: "Seasons"
         name: "seasons"
