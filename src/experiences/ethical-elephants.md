@@ -1,7 +1,7 @@
 ---
 title: Ethical Elephants & Karen Culture
 location: Chiang Mai, Thailand
-image: /images/img_5936.heic
+image: /images/copy-of-changchilli_2-1-.jpg
 summary: Visit a hands-off sanctuary, walk with elephants in the forest, and
   stay in a Karen village homestay with your mahout guide.
 order: 2
