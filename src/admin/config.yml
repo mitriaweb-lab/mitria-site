@@ -151,3 +151,17 @@ collections:
           - { label: "Email", name: "email", widget: "string" }
           - { label: "Facebook URL", name: "facebook", widget: "string" }
           - { label: "Instagram URL", name: "instagram", widget: "string" }
+
+      - label: "Friends & Partners"
+        name: "partners"
+        file: "src/_data/partners.json"
+        fields:
+          - label: "Partners"
+            name: "partners"
+            widget: "list"
+            allow_add: true
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Description", name: "description", widget: "text", hint: "1-2 sentences about what they do" }
+              - { label: "Website URL", name: "url", widget: "string", required: false, hint: "Optional link to their site" }

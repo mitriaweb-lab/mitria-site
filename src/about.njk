@@ -68,9 +68,15 @@ permalink: /about/
     <div class="section-heading"><span class="section-label">Our Friends</span><h2>Partners doing good work</h2></div>
     <div class="partner-carousel">
       <div class="partner-carousel__track">
-        <div class="partner-carousel__card"><img src="https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=600&q=80" alt="Gibbon"><h4>Jahoo Gibbon Camp</h4><p>Community-run eco-lodge protecting gibbons in Cambodia's northeastern forests.</p></div>
-        <div class="partner-carousel__card"><img src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=600&q=80" alt="Elephant"><h4>Elephant Care Unchained</h4><p>Working to free captive elephants and provide ethical alternatives to traditional camps.</p></div>
-        <div class="partner-carousel__card"><img src="https://images.unsplash.com/photo-1591025207163-942350e47db2?w=600&q=80" alt="Sea turtle"><h4>Andaman Turtle Watch</h4><p>Marine conservation and sea turtle monitoring on Thailand's Andaman coast.</p></div>
+        {% for partner in partners.partners %}
+        <div class="partner-carousel__card">
+          {% if partner.url %}<a href="{{ partner.url }}" target="_blank" rel="noopener">{% endif %}
+          <img src="{{ partner.image }}" alt="{{ partner.name }}">
+          <h4>{{ partner.name }}</h4>
+          <p>{{ partner.description }}</p>
+          {% if partner.url %}</a>{% endif %}
+        </div>
+        {% endfor %}
       </div>
     </div>
     <p style="text-align:center;margin-top:var(--space-md);color:var(--color-text-muted);font-size:0.92rem;">Check out our <a href="/countries/">country pages</a> for a list of partners and other good folks to visit on your travels.</p>
