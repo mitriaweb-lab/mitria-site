@@ -1,8 +1,9 @@
 ---
-title: "Arukharka Village Monastery Reconstruction"
-location: "Nuwakot, Nepal"
-image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&q=80"
-summary: "Rebuilding a sacred space destroyed in the 2015 earthquake for a Tamang village community."
+title: Arukharka Village Monastery Reconstruction
+location: Nuwakot, Nepal
+image: /images/screenshot-2569-02-13-at-12.11.17 pm.png
+summary: Rebuilding a sacred space destroyed in the 2015 earthquake for a Tamang
+  village community.
 order: 4
 ---
 
