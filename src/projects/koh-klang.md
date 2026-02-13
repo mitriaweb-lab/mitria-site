@@ -1,7 +1,7 @@
 ---
-title: Koh Klang Island Community Conservation
+title: "Koh Klang Island Coastal Conservation "
 location: Krabi, Thailand
-image: /images/christian-holzinger-dcj_plbhg5i-unsplash.jpg
+image: /images/kristin-hoel-i5kmnyhiw6c-unsplash.jpg
 summary: Mangrove restoration, habitat rebuilding, and native bee conservation
   led by the island's residents.
 order: 1
