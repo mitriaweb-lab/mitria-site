@@ -3,6 +3,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/admin");
   eleventyConfig.addPassthroughCopy("src/images");
 
+  // Markdown filter for rendering CMS markdown fields in templates
+  const markdownIt = require("markdown-it");
+  const md = markdownIt({ html: true, breaks: true, linkify: true });
+  eleventyConfig.addFilter("md", value => value ? md.render(value) : "");
+
   eleventyConfig.addCollection("experiences", c =>
     c.getFilteredByGlob("src/experiences/*.md").sort((a, b) => (a.data.order || 0) - (b.data.order || 0))
   );

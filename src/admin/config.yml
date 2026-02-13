@@ -122,11 +122,11 @@ collections:
           - { label: "Hero Title", name: "heroTitle", widget: "string" }
           - { label: "Hero Subtitle", name: "heroSubtitle", widget: "string" }
           - { label: "About Heading", name: "aboutHeading", widget: "string" }
-          - { label: "About Paragraph 1", name: "aboutText1", widget: "text" }
-          - { label: "About Paragraph 2", name: "aboutText2", widget: "text" }
+          - { label: "About Paragraph 1", name: "aboutText1", widget: "markdown" }
+          - { label: "About Paragraph 2", name: "aboutText2", widget: "markdown" }
           - { label: "About Image", name: "aboutImage", widget: "image" }
           - { label: "Volunteering Heading", name: "volHeading", widget: "string" }
-          - { label: "Volunteering Text", name: "volText", widget: "text" }
+          - { label: "Volunteering Text", name: "volText", widget: "markdown" }
           - { label: "Volunteering Image", name: "volImage", widget: "image" }
 
       - label: "About Page"
@@ -136,11 +136,11 @@ collections:
           - { label: "Description", name: "description", widget: "string" }
           - { label: "Hero Image", name: "heroImage", widget: "image" }
           - { label: "Story Heading", name: "storyHeading", widget: "string" }
-          - { label: "Story Paragraph 1", name: "storyText1", widget: "text" }
-          - { label: "Story Paragraph 2", name: "storyText2", widget: "text" }
-          - { label: "Story Paragraph 3", name: "storyText3", widget: "text" }
+          - { label: "Story Paragraph 1", name: "storyText1", widget: "markdown" }
+          - { label: "Story Paragraph 2", name: "storyText2", widget: "markdown" }
+          - { label: "Story Paragraph 3", name: "storyText3", widget: "markdown" }
           - { label: "Story Image", name: "storyImage", widget: "image" }
-          - { label: "What We Do Text", name: "whatWeDoText", widget: "text" }
+          - { label: "What We Do Text", name: "whatWeDoText", widget: "markdown" }
 
       - label: "Site Settings"
         name: "settings"

@@ -22,8 +22,8 @@ showCta: true
       <div class="split__text">
         <span class="section-label">Who We Are</span>
         <h2>{{ home.aboutHeading }}</h2>
-        <p>{{ home.aboutText1 }}</p>
-        <p>{{ home.aboutText2 }}</p>
+        {{ home.aboutText1 | md | safe }}
+        {{ home.aboutText2 | md | safe }}
         <a href="/about/" class="btn--text">Learn about our story</a>
       </div>
       <div class="split__image">
@@ -63,7 +63,7 @@ showCta: true
       <div class="split__text">
         <span class="section-label">Volunteering</span>
         <h2>{{ home.volHeading }}</h2>
-        <p>{{ home.volText }}</p>
+        {{ home.volText | md | safe }}
         <a href="/experiences/" class="btn--text">Learn more</a>
       </div>
       <div class="split__image">
@@ -106,6 +106,7 @@ showCta: true
       <h2>Partners doing good work</h2>
     </div>
     <div class="partner-carousel">
+      <button class="carousel-btn carousel-btn--prev" aria-label="Previous">‹</button>
       <div class="partner-carousel__track">
         {% for partner in partners.partners %}
         <div class="partner-carousel__card">
@@ -117,9 +118,10 @@ showCta: true
         </div>
         {% endfor %}
       </div>
+      <button class="carousel-btn carousel-btn--next" aria-label="Next">›</button>
     </div>
-    <p style="text-align: center; margin-top: var(--space-lg); color: var(--color-text-muted); font-size: 0.92rem;">
-      Check out our <a href="/countries/">country pages</a> for a list of partners and other good folks to visit on your travels.
-    </p>
+    <div class="partners-cta">
+      <a href="/countries/" class="btn--text">Explore our country pages for more partners and good folks to visit →</a>
+    </div>
   </div>
 </section>

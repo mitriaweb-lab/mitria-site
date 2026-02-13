@@ -16,9 +16,9 @@ permalink: /about/
       <div class="split__text">
         <span class="section-label">Our Story</span>
         <h2>{{ about.storyHeading }}</h2>
-        <p>{{ about.storyText1 }}</p>
-        <p>{{ about.storyText2 }}</p>
-        <p>{{ about.storyText3 }}</p>
+        {{ about.storyText1 | md | safe }}
+        {{ about.storyText2 | md | safe }}
+        {{ about.storyText3 | md | safe }}
       </div>
       <div class="split__image">
         <img src="{{ about.storyImage }}" alt="Friends hiking through the highlands">
@@ -35,7 +35,7 @@ permalink: /about/
       <span class="section-label">What We Do</span>
       <h2>How we work</h2>
     </div>
-    <p class="about-intro">{{ about.whatWeDoText }}</p>
+    <div class="about-intro">{{ about.whatWeDoText | md | safe }}</div>
     <div class="what-we-do-grid">
       <div class="what-we-do-item"><img src="/images/star2.svg" alt="" class="what-we-do-icon"><h4>Trip Leading</h4><p>Custom-tailored experiences with local guides and community hosts.</p></div>
       <div class="what-we-do-item"><img src="/images/star2.svg" alt="" class="what-we-do-icon"><h4>Community Projects</h4><p>Infrastructure, conservation, cultural, and education initiatives.</p></div>
@@ -67,6 +67,7 @@ permalink: /about/
   <div class="container">
     <div class="section-heading"><span class="section-label">Our Friends</span><h2>Partners doing good work</h2></div>
     <div class="partner-carousel">
+      <button class="carousel-btn carousel-btn--prev" aria-label="Previous">‹</button>
       <div class="partner-carousel__track">
         {% for partner in partners.partners %}
         <div class="partner-carousel__card">
@@ -78,7 +79,10 @@ permalink: /about/
         </div>
         {% endfor %}
       </div>
+      <button class="carousel-btn carousel-btn--next" aria-label="Next">›</button>
     </div>
-    <p style="text-align:center;margin-top:var(--space-md);color:var(--color-text-muted);font-size:0.92rem;">Check out our <a href="/countries/">country pages</a> for a list of partners and other good folks to visit on your travels.</p>
+    <div class="partners-cta">
+      <a href="/countries/" class="btn--text">Explore our country pages for more partners and good folks to visit →</a>
+    </div>
   </div>
 </section>

@@ -899,6 +899,7 @@ p:last-child {
    PARTNER CAROUSEL
    ============================================ */
 .partner-carousel {
+  position: relative;
   overflow: hidden;
   margin: 0 calc(-1 * var(--space-md));
   padding: 0 var(--space-md);
@@ -909,6 +910,7 @@ p:last-child {
   gap: var(--space-md);
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   padding-bottom: var(--space-sm);
@@ -916,6 +918,51 @@ p:last-child {
 
 .partner-carousel__track::-webkit-scrollbar {
   display: none;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  color: var(--color-text);
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+  line-height: 1;
+  padding: 0 0 2px 0;
+}
+
+.carousel-btn:hover {
+  background: var(--color-bg-alt);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.14);
+}
+
+.carousel-btn--prev {
+  left: var(--space-sm);
+}
+
+.carousel-btn--next {
+  right: var(--space-sm);
+}
+
+@media (max-width: 640px) {
+  .carousel-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 1.2rem;
+  }
+  .carousel-btn--prev { left: 4px; }
+  .carousel-btn--next { right: 4px; }
 }
 
 .partner-carousel__card {
@@ -1073,4 +1120,20 @@ p:last-child {
 
 .star-divider--golden img {
   filter: sepia(1) saturate(3) brightness(0.9) hue-rotate(-10deg);
+}
+
+/* Partners link callout */
+.partners-cta {
+  text-align: center;
+  margin-top: var(--space-md);
+}
+
+.partners-cta .btn--text {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.partners-cta .btn--text:hover {
+  color: var(--color-primary-dark);
 }
