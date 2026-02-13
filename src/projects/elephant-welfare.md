@@ -1,8 +1,8 @@
 ---
-title: "Elephant & Mahout Welfare Activism"
-location: "Across Asia"
-image: "https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=800&q=80"
-summary: "Supporting hands-off elephant tourism and fair livelihoods for mahouts."
+title: Elephant & Mahout Welfare Activism
+location: Across Asia
+image: /images/z-wfvhg4fyzi-unsplash.jpg
+summary: Supporting hands-off elephant tourism and fair livelihoods for mahouts.
 order: 5
 ---
 
