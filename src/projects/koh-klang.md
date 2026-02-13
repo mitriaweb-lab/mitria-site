@@ -1,8 +1,9 @@
 ---
-title: "Koh Klang Island Community Conservation"
-location: "Krabi, Thailand"
-image: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=800&q=80"
-summary: "Mangrove restoration, habitat rebuilding, and native bee conservation led by the island's residents."
+title: Koh Klang Island Community Conservation
+location: Krabi, Thailand
+image: /images/christian-holzinger-dcj_plbhg5i-unsplash.jpg
+summary: Mangrove restoration, habitat rebuilding, and native bee conservation
+  led by the island's residents.
 order: 1
 ---
 
