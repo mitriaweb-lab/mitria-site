@@ -2,27 +2,21 @@
   "partners": [
     {
       "name": "Jahoo Gibbon Camp",
-      "image": "/images/a43ec96e-10eb-4340-b562-6610cde1cb8b.avif",
+      "image": "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=600&q=80",
       "description": "Community-run eco-lodge protecting gibbons in Cambodia's northeastern forests.",
-      "url": "https://www.gibbon.life/"
+      "url": ""
     },
     {
       "name": "Elephant Care Unchained",
-      "image": "/images/img_20191111_153907_235.webp",
+      "image": "https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=600&q=80",
       "description": "Working to free captive elephants and provide ethical alternatives to traditional camps.",
-      "url": "https://www.elephantcareunchained.com"
+      "url": ""
     },
     {
       "name": "Andaman Turtle Watch",
       "image": "https://images.unsplash.com/photo-1591025207163-942350e47db2?w=600&q=80",
       "description": "Marine conservation and sea turtle monitoring on Thailand's Andaman coast.",
-      "url": "https://www.facebook.com/groups/andamanturtlewatch/"
-    },
-    {
-      "name": "Elephant Valley Project (EVP)",
-      "image": "/images/paul-kapischka-kb2ixp1tvne-unsplash-1-.jpg",
-      "description": "Cambodia’s Original and Premiere Elephant Sanctuary since 2006",
-      "url": "https://elephantvalleyproject.org/"
+      "url": ""
     }
   ]
 }

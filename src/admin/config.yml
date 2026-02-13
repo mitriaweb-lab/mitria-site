@@ -16,7 +16,7 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Location", name: "location", widget: "string", hint: "e.g. Chiang Mai, Thailand" }
       - { label: "Image", name: "image", widget: "image" }
-      - { label: "Summary", name: "summary", widget: "text", hint: "Short description for cards (1-2 sentences)" }
+      - { label: "Summary", name: "summary", widget: "markdown", hint: "Short description for cards (1-2 sentences)" }
       - { label: "Note", name: "note", widget: "string", required: false, hint: "Optional italicized note (e.g. where proceeds go)" }
       - { label: "Display Order", name: "order", widget: "number", value_type: "int", default: 10 }
       - { label: "Full Description", name: "body", widget: "markdown" }
@@ -30,7 +30,7 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Location", name: "location", widget: "string", hint: "e.g. Krabi, Thailand" }
       - { label: "Image", name: "image", widget: "image" }
-      - { label: "Summary", name: "summary", widget: "text", hint: "Short description for cards" }
+      - { label: "Summary", name: "summary", widget: "markdown", hint: "Short description for cards" }
       - { label: "Display Order", name: "order", widget: "number", value_type: "int", default: 10 }
       - { label: "Full Description", name: "body", widget: "markdown" }
 
@@ -44,7 +44,7 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Category", name: "category", widget: "string", hint: "e.g. Animal Welfare, Project Zomia" }
       - { label: "Image", name: "image", widget: "image" }
-      - { label: "Summary", name: "summary", widget: "text", hint: "Short description for the blog listing" }
+      - { label: "Summary", name: "summary", widget: "markdown", hint: "Short description for the blog listing" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
 
@@ -72,7 +72,7 @@ collections:
           - { label: "Name", name: "name", widget: "string" }
           - { label: "Location", name: "location", widget: "string", required: false }
           - { label: "Image", name: "image", widget: "image" }
-          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Description", name: "description", widget: "markdown" }
       - label: "Experiences"
         name: "experiences"
         widget: "list"
@@ -81,7 +81,7 @@ collections:
           - { label: "Name", name: "name", widget: "string" }
           - { label: "Region", name: "region", widget: "string", required: false }
           - { label: "Image", name: "image", widget: "image" }
-          - { label: "Summary", name: "summary", widget: "text" }
+          - { label: "Summary", name: "summary", widget: "markdown" }
       - label: "Volunteering Opportunities"
         name: "volunteering"
         widget: "list"
@@ -89,7 +89,7 @@ collections:
         fields:
           - { label: "Name", name: "name", widget: "string" }
           - { label: "Image", name: "image", widget: "image", required: false }
-          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Description", name: "description", widget: "markdown" }
       - label: "Friends & Partners"
         name: "friends"
         widget: "list"
@@ -97,15 +97,15 @@ collections:
         fields:
           - { label: "Name", name: "name", widget: "string" }
           - { label: "Image", name: "image", widget: "image", required: false }
-          - { label: "Description", name: "description", widget: "text" }
-      - { label: "Travel Tips", name: "travelTips", widget: "text", required: false, hint: "Dos and don'ts paragraph" }
+          - { label: "Description", name: "description", widget: "markdown" }
+      - { label: "Travel Tips", name: "travelTips", widget: "markdown", required: false, hint: "Dos and don'ts paragraph" }
       - label: "Seasons"
         name: "seasons"
         widget: "list"
         required: false
         fields:
           - { label: "Season Name", name: "name", widget: "string" }
-          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Description", name: "description", widget: "markdown" }
       - { label: "CTA Title", name: "ctaTitle", widget: "string", default: "Let us build you a custom itinerary" }
       - { label: "CTA Text", name: "ctaText", widget: "string", default: "Tell us what interests you and we'll design something personal." }
 
@@ -163,5 +163,32 @@ collections:
             fields:
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Image", name: "image", widget: "image" }
-              - { label: "Description", name: "description", widget: "text", hint: "1-2 sentences about what they do" }
+              - { label: "Description", name: "description", widget: "markdown", hint: "1-2 sentences about what they do" }
               - { label: "Website URL", name: "url", widget: "string", required: false, hint: "Optional link to their site" }
+
+      - label: "Page Settings"
+        name: "pageSettings"
+        file: "src/_data/pageSettings.json"
+        fields:
+          - { label: "--- EXPERIENCES PAGE ---", name: "expDivider", widget: "hidden", default: "" }
+          - { label: "Experiences Hero Image", name: "experiencesHero", widget: "image" }
+          - { label: "Experiences Title", name: "experiencesTitle", widget: "string" }
+          - { label: "Experiences Subtitle", name: "experiencesSubtitle", widget: "string" }
+          - { label: "--- PROJECTS PAGE ---", name: "projDivider", widget: "hidden", default: "" }
+          - { label: "Projects Hero Image", name: "projectsHero", widget: "image" }
+          - { label: "Projects Title", name: "projectsTitle", widget: "string" }
+          - { label: "Projects Subtitle", name: "projectsSubtitle", widget: "string" }
+          - { label: "--- COUNTRIES PAGE ---", name: "countDivider", widget: "hidden", default: "" }
+          - { label: "Countries Hero Image", name: "countriesHero", widget: "image" }
+          - { label: "Countries Title", name: "countriesTitle", widget: "string" }
+          - { label: "--- CONTACT PAGE ---", name: "contDivider", widget: "hidden", default: "" }
+          - { label: "Contact Hero Image", name: "contactHero", widget: "image" }
+          - { label: "Contact Title", name: "contactTitle", widget: "string" }
+          - { label: "Contact Intro Text", name: "contactIntro", widget: "markdown" }
+          - { label: "Contact Form Options (comma-separated)", name: "contactFormOptions", widget: "string", hint: "Comma-separated list of dropdown options" }
+          - { label: "--- EXPERIENCES BOTTOM SECTION ---", name: "itinDivider", widget: "hidden", default: "" }
+          - { label: "Itinerary Section Heading", name: "itineraryHeading", widget: "string" }
+          - { label: "Itinerary Section Text", name: "itineraryText", widget: "markdown" }
+          - { label: "Itinerary Section Image", name: "itineraryImage", widget: "image" }
+          - { label: "--- ABOUT PAGE ---", name: "aboutDivider", widget: "hidden", default: "" }
+          - { label: "How We Work Image", name: "aboutHowWeWorkImage", widget: "image" }

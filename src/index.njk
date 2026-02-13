@@ -6,7 +6,7 @@ showCta: true
 ---
 
 <section class="hero">
-  <img src="{{ home.heroImage }}" alt="Southeast Asia landscape" class="hero__image">
+  <img src="{{ home.heroImage }}" alt="Southeast Asia landscape" class="hero__image" fetchpriority="high">
   <div class="hero__overlay"></div>
   <div class="hero__content">
     <h1>{{ home.heroTitle }}</h1>
@@ -75,24 +75,27 @@ showCta: true
 
 <section class="section section--alt">
   <div class="container">
-    <div class="section-heading">
-      <span class="section-label">Project Zomia</span>
-      <h2>Where your money goes</h2>
-      <p>Nearly all of our profits fund community-driven projects across the region.</p>
-    </div>
-    <div class="card-grid card-grid--3">
-      {%- for proj in collections.projects | limit(3) %}
-      <a href="/projects/" class="card">
-        <img src="{{ proj.data.image }}" alt="{{ proj.data.title }}" class="card__image">
-        <div class="card__body">
-          <span class="card__location">{{ proj.data.location }}</span>
-          <h3>{{ proj.data.title }}</h3>
+    <div class="split">
+      <div class="split__text">
+        <span class="section-label">Project Zomia</span>
+        <h2>Where your money goes</h2>
+        <p>Nearly all of our profits fund community-driven projects across the region.</p>
+        <div class="project-list">
+          {%- for proj in collections.projects | limit(4) %}
+          <a href="/projects/" class="project-list__item">
+            <img src="{{ proj.data.image }}" alt="{{ proj.data.title }}" class="project-list__img">
+            <div>
+              <h4>{{ proj.data.title }}</h4>
+              <span class="project-list__location">{{ proj.data.location }}</span>
+            </div>
+          </a>
+          {%- endfor %}
         </div>
-      </a>
-      {%- endfor %}
-    </div>
-    <div style="text-align: center; margin-top: var(--space-lg);">
-      <a href="/projects/" class="btn btn--outline">All Projects</a>
+        <a href="/projects/" class="btn--text" style="margin-top: var(--space-sm); display: inline-block;">See all projects →</a>
+      </div>
+      <div class="split__image">
+        <img src="{{ collections.projects[0].data.image }}" alt="Project Zomia">
+      </div>
     </div>
   </div>
 </section>
@@ -121,7 +124,7 @@ showCta: true
       <button class="carousel-btn carousel-btn--next" aria-label="Next">›</button>
     </div>
     <div class="partners-cta">
-      <a href="/countries/" class="btn--text">Explore our country pages for more partners and good folks to visit →</a>
+      <a href="/countries/" class="btn--text">Explore our country pages for more partners and good folks to visit</a>
     </div>
   </div>
 </section>

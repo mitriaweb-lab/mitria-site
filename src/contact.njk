@@ -2,8 +2,42 @@
 layout: base.njk
 pageTitle: "Contact Us"
 permalink: "/contact/"
+showCta: false
 ---
-<section class="hero hero--short"><img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1600&q=80" alt="Landscape" class="hero__image"><div class="hero__overlay"></div><div class="hero__content"><h1>Get in Touch</h1></div></section>
-<section class="section"><div class="container"><div class="split"><div class="split__text"><p>Got questions, ideas, or just tired of tourist traps? We'd love to hear from you. We're ready to email back ASAP or even have a one-on-one phone call. Seriously. We will call you.</p><div style="margin-top:var(--space-lg);"><p><strong>Email:</strong> <a href="mailto:{{ site.email }}">{{ site.email }}</a></p></div><div style="margin-top:var(--space-md);"><p style="margin-bottom:0.5rem;"><strong>Follow us</strong></p><a href="{{ site.facebook }}" style="margin-right:1rem;">Facebook</a><a href="{{ site.instagram }}">Instagram</a></div></div>
-<div><form class="form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field"><p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p><div class="form__group"><label for="name">Name</label><input type="text" id="name" name="name" required></div><div class="form__group"><label for="email">Email</label><input type="email" id="email" name="email" required></div><div class="form__group"><label for="interest">What are you interested in?</label><select id="interest" name="interest"><option value="" disabled selected>Select an option</option><option>Hmong Homestay, Laos</option><option>Ethical Elephants, Thailand</option><option>Coastal Conservation, Thailand</option><option>Custom Itinerary</option><option>Volunteering</option><option>School Groups</option><option>Projects / Donations</option><option>Other</option></select></div><div class="form__group"><label for="message">Message</label><textarea id="message" name="message" rows="6" placeholder="Tell us what you're thinking..."></textarea></div><button type="submit" class="btn btn--primary">Send Message</button></form></div>
-</div></div></section>
+<section class="hero hero--short"><img src="{{ pageSettings.contactHero }}" alt="{{ pageSettings.contactTitle }}" class="hero__image"><div class="hero__overlay"></div><div class="hero__content"><h1>{{ pageSettings.contactTitle }}</h1></div></section>
+<section class="section">
+  <div class="container">
+    <div class="split">
+      <div class="split__text contact-info">
+        <img src="/images/logo.svg" alt="Mitria" class="contact-logo">
+        <div class="contact-intro">{{ pageSettings.contactIntro | md | safe }}</div>
+        <div class="contact-details">
+          <a href="mailto:{{ site.email }}" class="contact-detail">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <span>{{ site.email }}</span>
+          </a>
+          <div class="contact-social">
+            <a href="{{ site.facebook }}" target="_blank" rel="noopener" class="contact-social__link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              <span>Facebook</span>
+            </a>
+            <a href="{{ site.instagram }}" target="_blank" rel="noopener" class="contact-social__link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <form class="form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+          <div class="form__group"><label for="name">Name</label><input type="text" id="name" name="name" required></div>
+          <div class="form__group"><label for="email">Email</label><input type="email" id="email" name="email" required></div>
+          <div class="form__group"><label for="interest">What are you interested in?</label><select id="interest" name="interest"><option value="" disabled selected>Select an option</option>{% for opt in pageSettings.contactFormOptions.split(",") %}<option>{{ opt | trim }}</option>{% endfor %}</select></div>
+          <div class="form__group"><label for="message">Message</label><textarea id="message" name="message" rows="6" placeholder="Tell us what you're thinking..."></textarea></div>
+          <button type="submit" class="btn btn--primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
