@@ -811,6 +811,9 @@ p:last-child {
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
   padding: var(--space-md) var(--space-lg);
   margin-bottom: var(--space-lg);
+  max-width: 740px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .travel-tips__icon {
@@ -824,6 +827,7 @@ p:last-child {
   color: var(--color-text-light);
   font-size: 0.92rem;
   line-height: 1.7;
+  text-align: left;
 }
 
 .travel-tips__text p {

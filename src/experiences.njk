@@ -4,7 +4,7 @@ pageTitle: "Experiences"
 permalink: "/experiences/"
 showCta: false
 ---
-<section class="hero hero--short"><img src="{{ pageSettings.experiencesHero }}" alt="{{ pageSettings.experiencesTitle }}" class="hero__image"><div class="hero__overlay"></div><div class="hero__content"><h1>{{ pageSettings.experiencesTitle }}</h1><p>{{ pageSettings.experiencesSubtitle }}</p></div></section>
+<section class="hero hero--short"><img src="{{ pageSettings.experiencesHero }}" alt="{{ pageSettings.experiencesTitle }}" class="hero__image" fetchpriority="high" loading="eager"><div class="hero__overlay"></div><div class="hero__content"><h1>{{ pageSettings.experiencesTitle }}</h1><p>{{ pageSettings.experiencesSubtitle }}</p></div></section>
 <section class="section"><div class="container"><div class="section-heading"><span class="section-label">Our Trips</span><h2>Community-based experiences</h2></div>
 {% for exp in collections.experiences %}
 <div class="split{% if loop.index % 2 == 0 %} split--reverse{% endif %}" {% if not loop.last %}style="margin-bottom:var(--space-2xl);"{% endif %}><div class="split__image"><img src="{{ exp.data.image }}" alt="{{ exp.data.title }}"></div><div class="split__text"><span class="card__location">{{ exp.data.location }}, {{ exp.data.country }}</span><h3>{{ exp.data.title }}</h3>{{ exp.content | safe }}</div></div>
