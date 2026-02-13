@@ -1,8 +1,9 @@
 ---
-title: "Ban Long Lao Community & Heritage Center"
-location: "Luang Prabang, Laos"
-image: "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=800&q=80"
-summary: "A community center and living museum of Hmong culture, built with handmade adobe bricks."
+title: Ban Long Lao Community & Heritage Center
+location: Luang Prabang, Laos
+image: /images/vu-thang-hsdhp8o6gu0-unsplash.jpg
+summary: A community center and living museum of Hmong culture, built with
+  handmade adobe bricks.
 order: 2
 ---
 
