@@ -1,9 +1,11 @@
 ---
-title: "Hmong Village Hike & Homestay"
-location: "Luang Prabang, Laos"
-image: "https://images.unsplash.com/photo-1583321500900-82807e458f3c?w=800&q=80"
-summary: "Journey into the mountains to a Hmong village, learn traditions from your hosts, and hike through jungle trails to Kuang Si Falls."
-note: "Proceeds from this trip go directly toward building the new community center for the village."
+title: Hmong Village Hike & Homestay
+location: Luang Prabang, Laos
+image: /images/peter-burdon-4h2xmy48biy-unsplash-1-.jpg
+summary: Journey into the mountains to a Hmong village, learn traditions from
+  your hosts, and hike through jungle trails to Kuang Si Falls.
+note: Proceeds from this trip go directly toward building the new community
+  center for the village.
 order: 1
 ---
 
