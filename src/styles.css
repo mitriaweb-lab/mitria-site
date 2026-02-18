@@ -225,9 +225,7 @@ p:last-child {
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(245, 243, 238, 0.95);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: var(--color-bg);
   border-bottom: 1px solid var(--color-border);
   transition: box-shadow 0.3s ease;
 }
@@ -356,6 +354,7 @@ p:last-child {
   justify-content: flex-start;
   overflow: hidden;
   margin-top: 72px;
+  background: #2c3a2e;
 }
 
 .hero--short {
@@ -679,6 +678,7 @@ p:last-child {
   position: relative;
   padding: var(--space-xl) 0;
   overflow: hidden;
+  background: #2c2c2c;
 }
 
 .commitments-bg {
