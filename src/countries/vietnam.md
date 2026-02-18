@@ -23,6 +23,4 @@ ctaTitle: Let us build you a custom itinerary
 ctaText: Tell us what interests you and we'll design something personal for Vietnam.
 ---
 
-Vietnam's story runs like its rivers: winding through dynasties, colonial rule, and hard-fought independence. Rice paddies mirror the sky, and cities hum with a determined energy born from rebuilding and remembering. In the alleys of Hanoi's Old Quarter or the lantern-lit streets of Hội An, history is not just preserved; it's lived, layered into the cadence of daily life.
-
-The highlands are home to ethnic minority groups such as the Hmong, Dao, and Tay, while the coast offers fishing villages, limestone islands, and bustling markets.
+Vietnam stretches from the terraced highlands of the north to the river deltas of the south, with 54 recognized ethnic groups, a complex colonial and wartime history, and cities that move at a pace that takes getting used to. We don't currently run experiences or projects in Vietnam, but we're exploring partnerships with community organizations in the northern highlands and central coast. If you're planning travel here, get in touch and we can connect you with organizations doing good work.

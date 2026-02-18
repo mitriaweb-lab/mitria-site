@@ -41,6 +41,16 @@ layout: base.njk
 </section>
 {% endif %}
 
+{% if not (projects and projects.length) and not (experiences and experiences.length) and not (friends and friends.length) and not (volunteering and volunteering.length) %}
+<section class="section section--alt">
+  <div class="container">
+    <div class="page-intro" style="text-align: center;">
+      <p style="font-size: 1.05rem; color: var(--color-text-light);">We're building partnerships and experiences in {{ title }}. In the meantime, <a href="/contact/" class="btn--text">get in touch</a> and we'll help you plan a custom itinerary or connect you with organizations doing good work here.</p>
+    </div>
+  </div>
+</section>
+{% endif %}
+
 {% if projects and projects.length %}
 <section class="section section--alt">
   <div class="container">

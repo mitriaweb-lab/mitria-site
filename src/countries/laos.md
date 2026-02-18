@@ -33,13 +33,13 @@ experiences:
 friends:
   - name: Big Brother Mouse
     description: Local non-profit promoting literacy.
-    image: /images/screenshot-2569-02-13-at-12.19.14 pm.png
+    image: /images/laos-community-1.png
   - name: Laos Buffalo Dairy
     description: Sustainable dairy farm supporting local farmers and community nutrition.
     image: /images/laos-buffalo-dairy-woman-walks-holding-buffalo-rope-meadow.webp
   - name: Free the Bears
     description: Rescues and cares for bears saved from the wildlife trade.
-    image: /images/screenshot-2569-02-13-at-12.19.29 pm.png
+    image: /images/laos-community-2.png
   - name: The Traditional Arts and Ethnology Centre (TAEC)
     description: Showcases the diverse cultures of Laos' ethnic groups while
       advocating for their preservation.

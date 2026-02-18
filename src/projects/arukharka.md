@@ -1,7 +1,7 @@
 ---
 title: Arukharka Village Monastery Reconstruction
 location: Nuwakot, Nepal
-image: /images/screenshot-2569-02-13-at-12.11.17 pm.png
+image: /images/arukharka-monastery.png
 summary: Rebuilding a sacred space destroyed in the 2015 earthquake for a Tamang
   village community.
 order: 4

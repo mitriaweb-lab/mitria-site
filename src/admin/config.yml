@@ -18,6 +18,9 @@ collections:
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Summary", name: "summary", widget: "markdown", hint: "Short description for cards (1-2 sentences)" }
       - { label: "Note", name: "note", widget: "string", required: false, hint: "Optional italicized note (e.g. where proceeds go)" }
+      - { label: "Duration", name: "duration", widget: "string", required: false, hint: "e.g. 2 days / 1 night" }
+      - { label: "Group Size", name: "groupSize", widget: "string", required: false, hint: "e.g. 2–8 people" }
+      - { label: "Difficulty", name: "difficulty", widget: "string", required: false, hint: "e.g. Easy, Moderate, Challenging" }
       - { label: "Display Order", name: "order", widget: "number", value_type: "int", default: 10 }
       - { label: "Full Description", name: "body", widget: "markdown" }
 

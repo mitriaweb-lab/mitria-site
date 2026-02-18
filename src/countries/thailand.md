@@ -76,4 +76,4 @@ ctaTitle: Let us build you a custom itinerary
 ctaText: Tell us what interests you and we'll design something personal for Thailand.
 ---
 
-Thailand is woven from ancient kingdoms, distinct cultures, and modern rhythms. Monks sweep temple grounds at dawn while bustling streets pulse with urban life. In the rural highlands, the new generations seamlessly blend ethnic traditions with the latest Tik Tok trends. It's almost impossible to step where no tourist has tread before here, but there's also never been a better ability to connect and contribute in positive ways.
+Thailand spans ancient temple cities, highland farming communities, and a coastline shaped by fishing and tourism. In the rural north, Karen and Hmong communities maintain distinct cultural practices while navigating the pressures of a rapidly modernizing economy. Overtourism is a real problem here, but meaningful connections are still possible when you know where to look and who to travel with.

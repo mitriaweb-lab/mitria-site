@@ -25,6 +25,4 @@ ctaTitle: Let us build you a custom itinerary
 ctaText: Tell us what interests you and we'll design something personal for Malaysia.
 ---
 
-Malaysia is a meeting place of trade winds, migration routes, and centuries of cultural exchange. Once part of ancient maritime kingdoms and later a prize of colonial powers, it now holds many worlds within one border. In the highland tea fields, on the wooden jetties of fishing villages, and in the call to prayer drifting through tropical rain, Malaysia's history is not locked in museums; it breathes in the everyday.
-
-The peninsula offers Malay, Chinese, and Indian heritage intertwined, while Borneo's wild interior shelters rare wildlife like orangutans, proboscis monkeys, and pygmy elephants.
+Malaysia sits at the crossroads of Malay, Chinese, Indian, and indigenous Orang Asli and Dayak cultures, shaped by centuries of maritime trade and colonial occupation. Borneo's interior holds some of the oldest rainforest on earth, and the communities living there are working to keep it standing. We don't yet have on-the-ground partnerships in Malaysia, but we're building connections with conservation and community organizations in Sabah and Sarawak. Contact us if you're planning travel here and want recommendations.

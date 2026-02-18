@@ -41,7 +41,7 @@ showCta: true
     </div>
     <div class="card-grid card-grid--3">
       {%- for exp in collections.experiences | limit(3) %}
-      <a href="/experiences/" class="card">
+      <a href="/experiences/#{{ exp.data.title | slugify }}" class="card">
         <img src="{{ exp.data.image }}" alt="{{ exp.data.title }}" class="card__image">
         <div class="card__body">
           <span class="card__location">{{ exp.data.location }}</span>
@@ -64,7 +64,7 @@ showCta: true
         <span class="section-label">Volunteering</span>
         <h2>{{ home.volHeading }}</h2>
         {{ home.volText | md | safe }}
-        <a href="/experiences/" class="btn--text">Learn more</a>
+        <a href="/experiences/#volunteering" class="btn--text">Learn more</a>
       </div>
       <div class="split__image">
         <img src="{{ home.volImage }}" alt="Volunteering">
@@ -79,7 +79,7 @@ showCta: true
       <div class="split__text">
         <span class="section-label">Project Zomia</span>
         <h2>Where your money goes</h2>
-        <p>Nearly all of our profits fund community-driven projects across the region.</p>
+        <p>Project Zomia is our initiative for funding community-driven projects across the region. Over 80% of our profits go directly to these projects.</p>
         <div class="project-list">
           {%- for proj in collections.projects | limit(4) %}
           <a href="/projects/" class="project-list__item">

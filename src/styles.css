@@ -920,6 +920,21 @@ p:last-child {
   color: var(--color-primary-dark);
 }
 
+.trip-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin-top: var(--space-sm);
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.88rem;
+  color: var(--color-text-light);
+}
+
+.trip-details__item strong {
+  color: var(--color-text);
+}
+
 @media (max-width: 768px) {
   .travel-tips {
     flex-direction: column;
