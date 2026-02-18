@@ -935,6 +935,34 @@ p:last-child {
   color: var(--color-text);
 }
 
+.vol-partners {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.vol-partner {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--space-sm) var(--space-md);
+}
+
+.vol-partner h4 {
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+
+.vol-partner .card__location {
+  font-size: 0.78rem;
+}
+
+.vol-partner p {
+  font-size: 0.88rem;
+  margin-top: 0.3rem;
+  color: var(--color-text-light);
+}
+
 @media (max-width: 768px) {
   .travel-tips {
     flex-direction: column;

@@ -7,9 +7,42 @@ showCta: false
 <section class="hero hero--short"><img src="{{ pageSettings.experiencesHero }}" alt="{{ pageSettings.experiencesTitle }}" class="hero__image" fetchpriority="high" loading="eager"><div class="hero__overlay"></div><div class="hero__content"><h1>{{ pageSettings.experiencesTitle }}</h1><p>{{ pageSettings.experiencesSubtitle }}</p></div></section>
 <section class="section"><div class="container"><div class="section-heading"><span class="section-label">Our Trips</span><h2>Community-based experiences</h2></div>
 {% for exp in collections.experiences %}
-<div id="{{ exp.data.title | slugify }}" class="split{% if loop.index % 2 == 0 %} split--reverse{% endif %}" {% if not loop.last %}style="margin-bottom:var(--space-2xl);"{% endif %}><div class="split__image"><img src="{{ exp.data.image }}" alt="{{ exp.data.title }}"></div><div class="split__text"><span class="card__location">{{ exp.data.location }}</span><h3>{{ exp.data.title }}</h3>{{ exp.content | safe }}{% if exp.data.note %}<p class="text-muted" style="font-style:italic;margin-top:0.75rem;">{{ exp.data.note }}</p>{% endif %}<div class="trip-details">{% if exp.data.duration %}<span class="trip-details__item"><strong>Duration:</strong> {{ exp.data.duration }}</span>{% endif %}{% if exp.data.groupSize %}<span class="trip-details__item"><strong>Group size:</strong> {{ exp.data.groupSize }}</span>{% endif %}{% if exp.data.difficulty %}<span class="trip-details__item"><strong>Difficulty:</strong> {{ exp.data.difficulty }}</span>{% endif %}<span class="trip-details__item"><strong>Pricing:</strong> <a href="/contact/">Contact us</a></span></div><a href="/contact/" class="btn--text" style="margin-top: var(--space-sm); display: inline-block;">Inquire about this trip →</a></div></div>
+<div id="{{ exp.data.title | slugify }}" class="split{% if loop.index % 2 == 0 %} split--reverse{% endif %}" {% if not loop.last %}style="margin-bottom:var(--space-2xl);"{% endif %}><div class="split__image"><img src="{{ exp.data.image }}" alt="{{ exp.data.title }}"></div><div class="split__text"><span class="card__location">{{ exp.data.location }}</span><h3>{{ exp.data.title }}</h3>{{ exp.content | safe }}{% if exp.data.note %}<p class="text-muted" style="font-style:italic;margin-top:0.75rem;">{{ exp.data.note }}</p>{% endif %}<div class="trip-details">{% if exp.data.duration %}<span class="trip-details__item"><strong>Duration:</strong> {{ exp.data.duration }}</span>{% endif %}{% if exp.data.groupSize %}<span class="trip-details__item"><strong>Group size:</strong> {{ exp.data.groupSize }}</span>{% endif %}{% if exp.data.difficulty %}<span class="trip-details__item"><strong>Difficulty:</strong> {{ exp.data.difficulty }}</span>{% endif %}<span class="trip-details__item"><strong>Pricing:</strong> <a href="/contact/">Contact us</a></span></div><a href="/contact/" class="btn--text" style="margin-top: var(--space-sm); display: inline-block;">Inquire about this trip</a></div></div>
 {% endfor %}
 </div></section>
-<section id="volunteering" class="section section--alt"><div class="container"><div class="section-heading text-center"><span class="section-label">Volunteering</span><h2>Give back while you travel</h2></div><div class="page-intro"><p>We connect travelers with trusted, ethical volunteer opportunities across the region. From community infrastructure to marine conservation, we match you with organizations that produce measurable outcomes. These aren't staged experiences or feel-good photo ops. Volunteering through Mitria means working alongside local teams on projects they've designed and requested.</p><p style="margin-top: var(--space-md);">Current volunteering partners include <strong>Andaman Turtle Watch</strong> (marine conservation, Thailand), <strong>Kindred Spirit Elephant Sanctuary</strong> (ethical elephant care, Thailand), and community-led restoration projects on <strong>Koh Klang Island</strong>. We're actively expanding volunteer placements in Laos and Cambodia.</p><p style="margin-top: var(--space-md);"><a href="/contact/" class="btn--text">Get in touch about volunteering →</a></p></div></div></section>
+<section id="volunteering" class="section section--alt">
+  <div class="container">
+    <div class="section-heading text-center">
+      <span class="section-label">Volunteering</span>
+      <h2>Give back while you travel</h2>
+    </div>
+    <div class="split">
+      <div class="split__text">
+        <p>We connect travelers with trusted, ethical volunteer opportunities across the region. From community infrastructure to marine conservation, we match you with organizations that produce measurable outcomes. These aren't staged experiences or feel-good photo ops. Volunteering through Mitria means working alongside local teams on projects they've designed and requested.</p>
+        <p style="margin-top: var(--space-sm);">We're actively expanding volunteer placements in Laos and Cambodia.</p>
+        <a href="/contact/" class="btn--text" style="margin-top: var(--space-md); display: inline-block;">Get in touch about volunteering</a>
+      </div>
+      <div class="split__text">
+        <div class="vol-partners">
+          <div class="vol-partner">
+            <h4>Andaman Turtle Watch</h4>
+            <span class="card__location">Thailand</span>
+            <p>Marine conservation and sea turtle monitoring on the Andaman coast.</p>
+          </div>
+          <div class="vol-partner">
+            <h4>Kindred Spirit Elephant Sanctuary</h4>
+            <span class="card__location">Thailand</span>
+            <p>Ethical, hands-off elephant care in Chiang Mai province.</p>
+          </div>
+          <div class="vol-partner">
+            <h4>Koh Klang Island Restoration</h4>
+            <span class="card__location">Thailand</span>
+            <p>Community-led mangrove replanting and coastal habitat restoration.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="section section--alt"><div class="container"><div class="split"><div class="split__image"><img src="{{ pageSettings.itineraryImage }}" alt="Planning"></div><div class="split__text"><span class="section-label">Custom Itineraries</span><h2>{{ pageSettings.itineraryHeading }}</h2>{{ pageSettings.itineraryText | md | safe }}<a href="/contact/" class="btn--text">Start planning</a></div></div></div></section>
 <section class="cta-banner"><h2>Let's plan something meaningful</h2><a href="/contact/" class="btn btn--outline">Get in Touch</a></section>

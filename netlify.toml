@@ -1,5 +1,5 @@
 [build]
-  command = "npx @11ty/eleventy"
+  command = "npm install && node optimize-images.js && npx @11ty/eleventy"
   publish = "_site"
 
 [[headers]]
