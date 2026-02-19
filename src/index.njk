@@ -108,20 +108,18 @@ showCta: true
       <span class="section-label">Our Friends</span>
       <h2>Partners doing good work</h2>
     </div>
-    <div class="partner-carousel">
-      <button class="carousel-btn carousel-btn--prev" aria-label="Previous">‹</button>
-      <div class="partner-carousel__track">
-        {% for partner in partners.partners %}
-        <div class="partner-carousel__card">
-          {% if partner.url %}<a href="{{ partner.url }}" target="_blank" rel="noopener">{% endif %}
+    <div class="partner-grid">
+      {% for partner in partners.partners %}
+      <a href="{{ partner.url }}" target="_blank" rel="noopener" class="partner-grid__card">
+        <div class="partner-grid__image">
           <img src="{{ partner.image }}" alt="{{ partner.name }}">
+        </div>
+        <div class="partner-grid__text">
           <h4>{{ partner.name }}</h4>
           <p>{{ partner.description }}</p>
-          {% if partner.url %}</a>{% endif %}
         </div>
-        {% endfor %}
-      </div>
-      <button class="carousel-btn carousel-btn--next" aria-label="Next">›</button>
+      </a>
+      {% endfor %}
     </div>
     <div class="partners-cta">
       <a href="/countries/" class="btn--text">Explore our country pages for more partners and good folks to visit</a>

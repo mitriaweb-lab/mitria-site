@@ -87,50 +87,6 @@
     window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('nav--scrolled', window.scrollY > 10));
     // Lazy load all images except first hero
     document.querySelectorAll('img:not(.hero__image)').forEach(img => { img.loading = 'lazy'; img.decoding = 'async'; });
-    // Carousel controls
-    document.querySelectorAll('.partner-carousel').forEach(carousel => {
-      const track = carousel.querySelector('.partner-carousel__track');
-      const prev = carousel.querySelector('.carousel-btn--prev');
-      const next = carousel.querySelector('.carousel-btn--next');
-      const cardWidth = 320;
-      let isScrolling = false;
-
-      function scrollNext() {
-        if (isScrolling) return;
-        const maxScroll = track.scrollWidth - track.clientWidth;
-        if (track.scrollLeft >= maxScroll - 5) {
-          isScrolling = true;
-          track.style.scrollBehavior = 'auto';
-          track.scrollLeft = 0;
-          void track.offsetHeight;
-          track.style.scrollBehavior = 'smooth';
-          setTimeout(() => { isScrolling = false; }, 50);
-        } else {
-          track.scrollBy({ left: cardWidth, behavior: 'smooth' });
-        }
-      }
-      function scrollPrev() {
-        if (isScrolling) return;
-        if (track.scrollLeft <= 5) {
-          isScrolling = true;
-          track.style.scrollBehavior = 'auto';
-          track.scrollLeft = track.scrollWidth - track.clientWidth;
-          void track.offsetHeight;
-          track.style.scrollBehavior = 'smooth';
-          setTimeout(() => { isScrolling = false; }, 50);
-        } else {
-          track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-        }
-      }
-
-      if (prev) prev.addEventListener('click', scrollPrev);
-      if (next) next.addEventListener('click', scrollNext);
-      let autoplay = setInterval(scrollNext, 5000);
-      carousel.addEventListener('mouseenter', () => clearInterval(autoplay));
-      carousel.addEventListener('mouseleave', () => {
-        autoplay = setInterval(scrollNext, 5000);
-      });
-    });
     // Parallax for Zomia intro
     (function() {
       var hornbill = document.querySelector('.zomia-intro__hornbill');
