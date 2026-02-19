@@ -44,8 +44,13 @@ layout: base.njk
 {% if not (projects and projects.length) and not (experiences and experiences.length) and not (friends and friends.length) and not (volunteering and volunteering.length) %}
 <section class="section section--alt">
   <div class="container">
-    <div class="page-intro" style="text-align: center;">
-      <p style="font-size: 1.05rem; color: var(--color-text-light);">We're building partnerships and experiences in {{ title }}. In the meantime, <a href="/contact/" class="btn--text">get in touch</a> and we'll help you plan a custom itinerary or connect you with organizations doing good work here.</p>
+    <div class="coming-soon">
+      <div class="coming-soon__icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      </div>
+      <h3>Experiences coming soon</h3>
+      <p>We're building partnerships and developing experiences in {{ title }}. In the meantime, we can help you plan a custom itinerary or connect you with organizations doing good work here.</p>
+      <a href="/contact/" class="btn btn--primary" style="margin-top: var(--space-md);">Plan a custom trip</a>
     </div>
   </div>
 </section>

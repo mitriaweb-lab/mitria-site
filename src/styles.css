@@ -963,6 +963,204 @@ p:last-child {
   color: var(--color-text-light);
 }
 
+/* Volunteering section */
+.vol-section {
+  background: var(--color-primary-dark);
+  padding: var(--space-xl) 0;
+  color: var(--color-white);
+}
+
+.vol-section__inner {
+  text-align: center;
+}
+
+.vol-section__header {
+  max-width: 640px;
+  margin: 0 auto var(--space-lg);
+}
+
+.vol-section__header h2 {
+  color: var(--color-white);
+  margin-bottom: var(--space-sm);
+}
+
+.vol-section__header p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.vol-section__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.vol-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--border-radius);
+  padding: var(--space-md);
+  text-align: left;
+  transition: background 0.2s ease;
+}
+
+.vol-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.vol-card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-sm);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.vol-card h4 {
+  color: var(--color-white);
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.vol-card__location {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.vol-card p {
+  font-size: 0.88rem;
+  margin-top: 0.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+}
+
+.vol-section__expanding {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.88rem;
+  font-style: italic;
+  margin-bottom: var(--space-md);
+}
+
+.btn--light {
+  border-color: rgba(255, 255, 255, 0.6);
+  color: var(--color-white);
+}
+
+.btn--light:hover {
+  background: var(--color-white);
+  color: var(--color-primary-dark);
+  border-color: var(--color-white);
+}
+
+/* Zomia intro on projects page */
+.zomia-intro {
+  padding: var(--space-lg) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.zomia-intro__inner {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-xl);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.zomia-intro__stat {
+  flex-shrink: 0;
+  text-align: center;
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-sage-light);
+  border-radius: var(--border-radius);
+}
+
+.zomia-intro__number {
+  display: block;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.zomia-intro__label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-light);
+  margin-top: 0.3rem;
+}
+
+.zomia-intro__text p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-text);
+}
+
+.zomia-intro__text p + p {
+  margin-top: var(--space-sm);
+  color: var(--color-text-light);
+}
+
+/* Coming soon callout for country pages */
+.coming-soon {
+  max-width: 540px;
+  margin: 0 auto;
+  text-align: center;
+  padding: var(--space-lg);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+}
+
+.coming-soon__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-sage-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-sm);
+  color: var(--color-primary);
+}
+
+.coming-soon h3 {
+  font-size: 1.2rem;
+  margin-bottom: var(--space-xs);
+}
+
+.coming-soon p {
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .vol-section__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .zomia-intro__inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .zomia-intro__stat {
+    width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
   .travel-tips {
     flex-direction: column;

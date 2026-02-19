@@ -10,37 +10,42 @@ showCta: false
 <div id="{{ exp.data.title | slugify }}" class="split{% if loop.index % 2 == 0 %} split--reverse{% endif %}" {% if not loop.last %}style="margin-bottom:var(--space-2xl);"{% endif %}><div class="split__image"><img src="{{ exp.data.image }}" alt="{{ exp.data.title }}"></div><div class="split__text"><span class="card__location">{{ exp.data.location }}</span><h3>{{ exp.data.title }}</h3>{{ exp.content | safe }}{% if exp.data.note %}<p class="text-muted" style="font-style:italic;margin-top:0.75rem;">{{ exp.data.note }}</p>{% endif %}<div class="trip-details">{% if exp.data.duration %}<span class="trip-details__item"><strong>Duration:</strong> {{ exp.data.duration }}</span>{% endif %}{% if exp.data.groupSize %}<span class="trip-details__item"><strong>Group size:</strong> {{ exp.data.groupSize }}</span>{% endif %}{% if exp.data.difficulty %}<span class="trip-details__item"><strong>Difficulty:</strong> {{ exp.data.difficulty }}</span>{% endif %}<span class="trip-details__item"><strong>Pricing:</strong> <a href="/contact/">Contact us</a></span></div><a href="/contact/" class="btn--text" style="margin-top: var(--space-sm); display: inline-block;">Inquire about this trip</a></div></div>
 {% endfor %}
 </div></section>
-<section id="volunteering" class="section section--alt">
+<section id="volunteering" class="vol-section">
   <div class="container">
-    <div class="section-heading text-center">
-      <span class="section-label">Volunteering</span>
-      <h2>Give back while you travel</h2>
-    </div>
-    <div class="split">
-      <div class="split__text">
-        <p>We connect travelers with trusted, ethical volunteer opportunities across the region. From community infrastructure to marine conservation, we match you with organizations that produce measurable outcomes. These aren't staged experiences or feel-good photo ops. Volunteering through Mitria means working alongside local teams on projects they've designed and requested.</p>
-        <p style="margin-top: var(--space-sm);">We're actively expanding volunteer placements in Laos and Cambodia.</p>
-        <a href="/contact/" class="btn--text" style="margin-top: var(--space-md); display: inline-block;">Get in touch about volunteering</a>
+    <div class="vol-section__inner">
+      <div class="vol-section__header">
+        <span class="section-label section-label--light">Volunteering</span>
+        <h2>Give back while you travel</h2>
+        <p>We connect travelers with trusted, ethical volunteer opportunities across the region. These aren't staged experiences or feel-good photo ops. Volunteering through Mitria means working alongside local teams on projects they've designed and requested.</p>
       </div>
-      <div class="split__text">
-        <div class="vol-partners">
-          <div class="vol-partner">
-            <h4>Andaman Turtle Watch</h4>
-            <span class="card__location">Thailand</span>
-            <p>Marine conservation and sea turtle monitoring on the Andaman coast.</p>
+      <div class="vol-section__grid">
+        <div class="vol-card">
+          <div class="vol-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 17.58A5 5 0 0 0 18 8h-1.26A8 8 0 1 0 4 16.25"/><path d="M8 16l-1 4M12 16l-1 4M16 16l-1 4"/></svg>
           </div>
-          <div class="vol-partner">
-            <h4>Kindred Spirit Elephant Sanctuary</h4>
-            <span class="card__location">Thailand</span>
-            <p>Ethical, hands-off elephant care in Chiang Mai province.</p>
+          <h4>Andaman Turtle Watch</h4>
+          <span class="vol-card__location">Andaman Coast, Thailand</span>
+          <p>Marine conservation and sea turtle monitoring.</p>
+        </div>
+        <div class="vol-card">
+          <div class="vol-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/></svg>
           </div>
-          <div class="vol-partner">
-            <h4>Koh Klang Island Restoration</h4>
-            <span class="card__location">Thailand</span>
-            <p>Community-led mangrove replanting and coastal habitat restoration.</p>
+          <h4>Kindred Spirit Elephant Sanctuary</h4>
+          <span class="vol-card__location">Chiang Mai, Thailand</span>
+          <p>Ethical, hands-off elephant care and rehabilitation.</p>
+        </div>
+        <div class="vol-card">
+          <div class="vol-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 18a5 5 0 0 0-10 0"/><path d="M12 9V2"/><path d="M4.93 10.93l1.41 1.41"/><path d="M2 18h2M20 18h2M19.07 10.93l-1.41 1.41M12 13a4 4 0 0 0-4 4"/></svg>
           </div>
+          <h4>Koh Klang Island Restoration</h4>
+          <span class="vol-card__location">Krabi, Thailand</span>
+          <p>Community-led mangrove replanting and coastal habitat restoration.</p>
         </div>
       </div>
+      <p class="vol-section__expanding">We're actively expanding volunteer placements in Laos and Cambodia.</p>
+      <a href="/contact/" class="btn btn--outline btn--light">Get in touch about volunteering</a>
     </div>
   </div>
 </section>
