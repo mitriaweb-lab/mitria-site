@@ -131,6 +131,28 @@
         autoplay = setInterval(scrollNext, 5000);
       });
     });
+    // Parallax for Zomia intro
+    (function() {
+      var hornbill = document.querySelector('.zomia-intro__hornbill');
+      var statNum = document.querySelector('.zomia-intro__number');
+      if (!hornbill || !statNum) return;
+      var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReduced) return;
+      function onScroll() {
+        var rect = hornbill.closest('.zomia-intro').getBoundingClientRect();
+        var vh = window.innerHeight;
+        if (rect.top < vh && rect.bottom > 0) {
+          var progress = (vh - rect.top) / (vh + rect.height);
+          var offset = (progress - 0.5) * 40;
+          hornbill.style.transform = 'translateY(' + offset + 'px) rotate(' + (offset * 0.3) + 'deg)';
+          statNum.style.transform = 'translateY(' + (offset * -0.5) + 'px)';
+        }
+      }
+      var ticking = false;
+      window.addEventListener('scroll', function() {
+        if (!ticking) { requestAnimationFrame(function() { onScroll(); ticking = false; }); ticking = true; }
+      }, { passive: true });
+    })();
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", user => {
         if (!user) { window.netlifyIdentity.on("login", () => { document.location.href = "/admin/"; }); }
