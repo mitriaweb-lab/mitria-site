@@ -1,5 +1,5 @@
 /* ============================================
-   MITRIA â Global Styles
+   MITRIA Ã¢ÂÂ Global Styles
    ============================================ */
 
 /* --- Reset & Base --- */
@@ -45,9 +45,9 @@
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 1.5rem;
-  --space-lg: 3rem;
-  --space-xl: 5rem;
-  --space-2xl: 8rem;
+  --space-lg: 2rem;
+  --space-xl: 3.5rem;
+  --space-2xl: 5rem;
 
   --max-width: 1200px;
   --max-width-narrow: 800px;
@@ -216,7 +216,7 @@ p:last-child {
 }
 
 .btn--text::after {
-  content: ' â';
+  content: ' Ã¢ÂÂ';
 }
 
 .btn--text:hover {
