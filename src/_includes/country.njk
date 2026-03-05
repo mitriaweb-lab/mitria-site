@@ -87,7 +87,7 @@ layout: base.njk
           {% if exp.region %}<span class="exp-card__region">{{ exp.region }}</span>{% endif %}
           <h3 class="exp-card__title">{{ exp.name }}</h3>
           <p class="exp-card__summary">{{ exp.summary | md | safe }}</p>
-          <span class="exp-card__cta">{{ "View trip details \u2192" if exp.link else "Inquire about this trip \u2192" }}</span>
+          <span class="exp-card__cta">{{ "View trip details →" if exp.link else "Inquire about this trip →" }}</span>
         </div>
       </a>
       {% endfor %}
