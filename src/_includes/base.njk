@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if title and title != "Home" %}{{ title }} Ã¢ÂÂ {% endif %}{{ site.name }}</title>
+  <title>{% if title and title != "Home" %}{{ title }} | {% endif %}{{ site.name }}</title>
   <meta name="description" content="{{ description or site.tagline }}">
   <meta property="og:title" content="{% if title and title != 'Home' %}{{ title }} Ã¢ÂÂ {% endif %}{{ site.name }}">
   <meta property="og:description" content="{{ description or site.tagline }}">
