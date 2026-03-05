@@ -18,7 +18,7 @@ module.exports = function(eleventyConfig) {
     c.getFilteredByGlob("src/countries/*.md").sort((a, b) => (a.data.order || 0) - (b.data.order || 0))
   );
   eleventyConfig.addCollection("posts", c =>
-    c.getFilteredByGlob("src/blog/*.md").sort((a, b) => b.date - a.date)
+    c.getFilteredByGlob("src/blog/*.md").filter(p => !p.data.draft).sort((a, b) => b.date - a.date)
   );
 
   eleventyConfig.addFilter("limit", (arr, count) => (arr || []).slice(0, count));

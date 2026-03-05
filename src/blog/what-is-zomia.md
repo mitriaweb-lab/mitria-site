@@ -7,6 +7,7 @@ summary: The highland regions of Asia where diverse communities have
   historically lived beyond the reach of centralized governments, and why that
   spirit drives our work.
 date: 2025-01-10
+draft: true
 ---
 
 Coming soon. This post will explore the concept of Zomia and how it inspires our approach to community-led development.
