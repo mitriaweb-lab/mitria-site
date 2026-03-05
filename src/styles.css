@@ -1,5 +1,5 @@
 /* ============================================
-   MITRIA ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Global Styles
+   MITRIA ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Global Styles
    ============================================ */
 
 /* --- Reset & Base --- */
@@ -1177,9 +1177,9 @@ p:last-child {
 
 /* Volunteering section */
 .vol-section {
-  background: var(--color-primary-dark);
+  background: var(--color-bg-alt);
   padding: var(--space-xl) 0;
-  color: var(--color-white);
+  color: var(--color-text);
   position: relative;
   overflow: hidden;
 }
@@ -1197,14 +1197,15 @@ p:last-child {
 }
 
 .vol-section__header h2 {
-  color: var(--color-white);
+  color: var(--color-text);
   margin-bottom: var(--space-sm);
   text-align: center;
+  font-size: 2rem;
 }
 
 .vol-section__header p {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.95rem;
+  color: var(--color-text-light);
+  font-size: 1rem;
   line-height: 1.7;
   text-align: center;
 }
@@ -1217,24 +1218,23 @@ p:last-child {
 }
 
 .vol-card {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
   border-radius: var(--border-radius);
   padding: var(--space-md);
   text-align: left;
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .vol-card:hover {
-  background: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
   transform: translateY(-2px);
 }
 
 .vol-card__icon {
-  width: 52px;
-  height: 52px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1242,48 +1242,35 @@ p:last-child {
   overflow: hidden;
 }
 
-.vol-card__star {
-  width: 34px;
-  height: 34px;
-  object-fit: contain;
-  opacity: 0.75;
-  filter: brightness(10) saturate(0);
+.vol-card__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.vol-card__star--v2 {
-  transform: rotate(45deg) scale(1.1);
-}
-
-.vol-card__star--v3 {
-  transform: rotate(-30deg) scale(0.9);
-}
-
-.vol-card__icon--v2 {
-  background: rgba(255, 255, 255, 0.12);
-}
-
-.vol-card__icon--v3 {
-  background: rgba(255, 255, 255, 0.06);
-}
 
 .vol-card h4 {
-  color: var(--color-white);
-  font-size: 0.95rem;
-  margin-bottom: 0.25rem;
+  color: var(--color-text);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
 }
 
 .vol-card__location {
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  color: var(--color-primary);
+  display: block;
+  margin-bottom: 0.4rem;
 }
 
 .vol-card p {
-  font-size: 0.88rem;
-  margin-top: 0.5rem;
-  color: rgba(255, 255, 255, 0.7);
-  line-height: 1.5;
+  font-size: 0.92rem;
+  margin-top: 0.4rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
 }
 
 .btn--light {
@@ -1295,6 +1282,17 @@ p:last-child {
   background: var(--color-white);
   color: var(--color-primary-dark);
   border-color: var(--color-white);
+}
+
+.vol-section .btn--outline {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.vol-section .btn--outline:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
 }
 
 /* Zomia intro on projects page */
