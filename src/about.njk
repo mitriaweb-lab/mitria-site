@@ -4,7 +4,7 @@ title: About Mitria
 permalink: /about/
 ---
 
-<section class="hero hero--short">
+<section class="hero{% if pageSettings.aboutHeroSize == 'full' %}{% elif pageSettings.aboutHeroSize == 'tall' %} hero--tall{% else %} hero--short{% endif %}">
   <img src="{{ about.heroImage }}" alt="About Mitria" class="hero__image" fetchpriority="high" loading="eager">
   <div class="hero__overlay"></div>
   <div class="hero__content"><h1>About Mitria</h1></div>
