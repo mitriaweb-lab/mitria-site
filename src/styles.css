@@ -441,7 +441,8 @@ p:last-child {
 }
 
 .card-grid--2 {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, auto);
+    justify-content: center;
 }
 
 .card-grid--4 {
@@ -887,8 +888,9 @@ p:last-child {
 
 .quick-facts__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-md);
+  grid-template-columns: repeat(4, auto);
+  justify-content: center;
+  gap: var(--space-lg) var(--space-xl);
 }
 
 .quick-facts__item {
