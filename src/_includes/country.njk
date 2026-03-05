@@ -8,38 +8,37 @@ layout: base.njk
   <div class="hero__content"><h1>{{ title }}</h1></div>
 </section>
 
-<section class="section">
+<section class="section country-intro">
   <div class="container">
-    <div class="page-intro">
-      {{ content | safe }}
+    <div class="country-intro__split">
+      <div class="country-intro__text">
+        {{ content | safe }}
+      </div>
+      {% if quickFacts %}
+      <div class="country-intro__facts">
+        <div class="quick-facts__grid">
+          <div class="quick-facts__item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V7l8-4v18M13 21V3l6 4v14"/><path d="M9 9h.01M9 13h.01M9 17h.01"/></svg>
+            <div><span class="quick-facts__label">Capital</span><span class="quick-facts__value">{{ quickFacts.capital }}</span></div>
+          </div>
+          <div class="quick-facts__item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <div><span class="quick-facts__label">Language</span><span class="quick-facts__value">{{ quickFacts.language }}</span></div>
+          </div>
+          <div class="quick-facts__item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><path d="M12 6v6l4 2"/></svg>
+            <div><span class="quick-facts__label">Time Zone</span><span class="quick-facts__value">{{ quickFacts.timezone }}</span></div>
+          </div>
+          <div class="quick-facts__item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            <div><span class="quick-facts__label">Currency</span><span class="quick-facts__value">{{ quickFacts.currency }}</span></div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
     </div>
   </div>
 </section>
-
-{% if quickFacts %}
-<section class="quick-facts">
-  <div class="container">
-    <div class="quick-facts__grid">
-      <div class="quick-facts__item">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V7l8-4v18M13 21V3l6 4v14"/><path d="M9 9h.01M9 13h.01M9 17h.01"/></svg>
-        <div><span class="quick-facts__label">Capital</span><span class="quick-facts__value">{{ quickFacts.capital }}</span></div>
-      </div>
-      <div class="quick-facts__item">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        <div><span class="quick-facts__label">Language</span><span class="quick-facts__value">{{ quickFacts.language }}</span></div>
-      </div>
-      <div class="quick-facts__item">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><path d="M12 6v6l4 2"/></svg>
-        <div><span class="quick-facts__label">Time Zone</span><span class="quick-facts__value">{{ quickFacts.timezone }}</span></div>
-      </div>
-      <div class="quick-facts__item">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-        <div><span class="quick-facts__label">Currency</span><span class="quick-facts__value">{{ quickFacts.currency }}</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-{% endif %}
 
 {% if not (projects and projects.length) and not (experiences and experiences.length) and not (friends and friends.length) and not (volunteering and volunteering.length) %}
 <section class="section section--alt">
