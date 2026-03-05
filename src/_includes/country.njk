@@ -77,15 +77,17 @@ layout: base.njk
 <section class="section">
   <div class="container">
     <div class="section-heading"><span class="section-label">Experiences in {{ title }}</span></div>
-    <div class="card-grid card-grid--2">
+    <div class="exp-scroll">
       {% for exp in experiences %}
-      <a href="{{ exp.link if exp.link else '/contact/' }}" class="card card--experience">
-        <img src="{{ exp.image }}" alt="{{ exp.name }}" class="card__image">
-        <div class="card__body">
-          {% if exp.region %}<span class="card__location">{{ exp.region }}</span>{% endif %}
-          <h3>{{ exp.name }}</h3>
-          {{ exp.summary | md | safe }}
-          <span class="card__action">{{ "View trip details →" if exp.link else "Inquire about this trip →" }}</span>
+      <a href="{{ exp.link if exp.link else '/contact/' }}" class="exp-card">
+        <div class="exp-card__img-wrap">
+          <img src="{{ exp.image }}" alt="{{ exp.name }}" class="exp-card__image">
+        </div>
+        <div class="exp-card__body">
+          {% if exp.region %}<span class="exp-card__region">{{ exp.region }}</span>{% endif %}
+          <h3 class="exp-card__title">{{ exp.name }}</h3>
+          <p class="exp-card__summary">{{ exp.summary | md | safe }}</p>
+          <span class="exp-card__cta">{{ "View trip details \u2192" if exp.link else "Inquire about this trip \u2192" }}</span>
         </div>
       </a>
       {% endfor %}
