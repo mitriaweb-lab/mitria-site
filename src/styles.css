@@ -1,5 +1,5 @@
 /* ============================================
-   MITRIA Ã¢ÂÂ Global Styles
+   MITRIA ÃÂ¢ÃÂÃÂ Global Styles
    ============================================ */
 
 /* --- Reset & Base --- */
@@ -924,6 +924,38 @@ p:last-child {
   color: var(--color-primary);
   flex-shrink: 0;
 }
+
+@media (max-width: 768px) {
+  .country-intro__split {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    text-align: center;
+  }
+
+  .country-intro__text {
+    text-align: center;
+  }
+
+  .country-intro__facts {
+    justify-content: center;
+  }
+
+  .quick-facts__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .quick-facts__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-facts__item {
+    justify-content: center;
+  }
+}
+
 
 .quick-facts__label {
   display: block;
