@@ -17,7 +17,7 @@ projects:
       crafts.
   - name: Ban Chok Community Drinking Water System
     location: Luang Prabang
-    image: /images/img_0114.jpg
+    image: /images/amritanshu-sikdar-lognr-w1d8e-unsplash.jpg
     description: Across the Mekong from Luang Prabang, in another Hmong village
       called Ban Chok, our friend Lue tells us that clean water is scarce,
       especially during the dry season. We're working with Lue and local leaders
@@ -44,6 +44,16 @@ friends:
     description: Showcases the diverse cultures of Laos' ethnic groups while
       advocating for their preservation.
     image: /images/tai-dam-mosquito-net-detail-600x400.jpg
+quickFacts:
+  capital: Vientiane
+  language: Lao
+  currency: Kip (LAK)
+  timezone: GMT+7
+travelTips: Remove shoes before entering homes and temples. Say "sabaidee" with
+  a slight bow (nop). Don't touch anyone's head. Don't point your feet at people
+  or sacred objects. Try sticky rice with your hands the way locals do. Support
+  local businesses over foreign-owned ones. Dress modestly at temples and in
+  rural areas.
 seasons:
   - name: Cool & Dry (Nov–Feb)
     description: Crisp mornings in the highlands and comfortable daytime
@@ -56,12 +66,6 @@ seasons:
   - name: Green Season (Jun–Oct)
     description: Lush rice paddies and flowing waterfalls. Afternoon rains refresh
       the landscape and bring cooler evenings. Great for slow, immersive travel.
-travelTips: "Remove shoes before entering homes and temples. Say \"sabaidee\" with a slight bow (nop). Don't touch anyone's head. Don't point your feet at people or sacred objects. Try sticky rice with your hands the way locals do. Support local businesses over foreign-owned ones. Dress modestly at temples and in rural areas."
-quickFacts:
-  capital: "Vientiane"
-  language: "Lao"
-  currency: "Kip (LAK)"
-  timezone: "GMT+7"
 ctaTitle: Let us build you a custom itinerary
 ctaText: Tell us what interests you and we'll design something personal for Laos.
 ---
