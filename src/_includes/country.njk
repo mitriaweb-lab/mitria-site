@@ -58,7 +58,7 @@ layout: base.njk
 {% if projects and projects.length %}
 <section class="section section--alt">
   <div class="container">
-    <div class="section-heading"><span class="section-label">Our Projects in {{ title }}</span></div>
+    <div class="section-heading"><h2 class="section-label">Our Projects in {{ title }}</h2></div>
     {% for project in projects %}
     <div class="split{% if loop.index % 2 == 0 %} split--reverse{% endif %}"{% if not loop.last %} style="margin-bottom: var(--space-2xl);"{% endif %}>
       <div class="split__image"><img src="{{ project.image }}" alt="{{ project.name }}"></div>
@@ -76,7 +76,7 @@ layout: base.njk
 {% if experiences and experiences.length %}
 <section class="section">
   <div class="container">
-    <div class="section-heading"><span class="section-label">Experiences in {{ title }}</span></div>
+    <div class="section-heading"><h2 class="section-label">Experiences in {{ title }}</h2></div>
     <div class="exp-scroll">
       {% for exp in experiences %}
       <a href="{{ exp.link if exp.link else '/contact/' }}" class="exp-card">
@@ -99,7 +99,7 @@ layout: base.njk
 {% if volunteering and volunteering.length %}
 <section class="section section--alt">
   <div class="container">
-    <div class="section-heading"><span class="section-label">Volunteering Opportunities</span></div>
+    <div class="section-heading"><h2 class="section-label">Volunteering Opportunities</h2></div>
     <div class="card-grid card-grid--2" style="max-width:700px;">
       {% for vol in volunteering %}
       <div class="partner-card">
@@ -116,7 +116,7 @@ layout: base.njk
 {% if friends and friends.length %}
 <section class="section">
   <div class="container">
-    <div class="section-heading"><span class="section-label">Our Friends in {{ title }}</span></div>
+    <div class="section-heading"><h2 class="section-label">Our Friends in {{ title }}</h2></div>
     <div class="card-grid card-grid--3">
       {% for friend in friends %}
       <div class="partner-card">
@@ -133,7 +133,7 @@ layout: base.njk
 {% if seasons and seasons.length %}
 <section class="section section--alt">
   <div class="container">
-    <div class="section-heading" style="text-align: center;"><span class="section-label">Travel Guide</span><h2>Planning your trip to {{ title }}</h2></div>
+    <div class="section-heading" style="text-align: center;"><h2 class="section-label">Travel Guide</h2><h3>Planning your trip to {{ title }}</h3></div>
     {% if travelTips %}
     <div class="travel-tips">
       <svg class="travel-tips__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>

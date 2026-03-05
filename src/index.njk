@@ -20,8 +20,8 @@ showCta: true
   <div class="container">
     <div class="split">
       <div class="split__text">
-        <span class="section-label">Who We Are</span>
-        <h2>{{ home.aboutHeading }}</h2>
+        <h2 class="section-label">Who We Are</h2>
+        <h3>{{ home.aboutHeading }}</h3>
         {{ home.aboutText1 | md | safe }}
         {{ home.aboutText2 | md | safe }}
         <a href="/about/" class="btn--text">Learn about our story</a>
@@ -36,8 +36,8 @@ showCta: true
 <section class="section section--alt">
   <div class="container">
     <div class="section-heading">
-      <span class="section-label">Experiences</span>
-      <h2>Travel your way</h2>
+      <h2 class="section-label">Experiences</h2>
+      <h3>Travel your way</h3>
     </div>
     <div class="card-grid card-grid--3">
       {%- for exp in collections.experiences | limit(3) %}
@@ -61,8 +61,8 @@ showCta: true
   <div class="container">
     <div class="split split--reverse">
       <div class="split__text">
-        <span class="section-label">Volunteering</span>
-        <h2>{{ home.volHeading }}</h2>
+        <h2 class="section-label">Volunteering</h2>
+        <h3>{{ home.volHeading }}</h3>
         {{ home.volText | md | safe }}
         <a href="/experiences/#volunteering" class="btn--text">Learn more</a>
       </div>
@@ -77,8 +77,8 @@ showCta: true
   <div class="container">
     <div class="split">
       <div class="split__text">
-        <span class="section-label">Project Zomia</span>
-        <h2>Where your money goes</h2>
+        <h2 class="section-label">Project Zomia</h2>
+        <h3>Where your money goes</h3>
         <p>Project Zomia is our initiative for funding community-driven projects across the region. Over 80% of our profits go directly to these projects.</p>
         <div class="project-list">
           {%- for proj in collections.projects | limit(4) %}
@@ -105,8 +105,8 @@ showCta: true
 <section class="section">
   <div class="container">
     <div class="section-heading text-center">
-      <span class="section-label">Our Friends</span>
-      <h2>Partners doing good work</h2>
+      <h2 class="section-label">Our Friends</h2>
+      <h3>Partners doing good work</h3>
     </div>
     <div class="partner-grid">
       {% for partner in partners.partners %}

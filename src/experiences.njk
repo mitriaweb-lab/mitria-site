@@ -5,7 +5,7 @@ permalink: "/experiences/"
 showCta: false
 ---
 <section class="hero{% if pageSettings.experiencesHeroSize == 'full' %}{% elif pageSettings.experiencesHeroSize == 'tall' %} hero--tall{% else %} hero--short{% endif %}"><img src="{{ pageSettings.experiencesHero }}" alt="{{ pageSettings.experiencesTitle }}" class="hero__image" fetchpriority="high" loading="eager"><div class="hero__overlay"></div><div class="hero__content"><h1>{{ pageSettings.experiencesTitle }}</h1><p>{{ pageSettings.experiencesSubtitle }}</p></div></section>
-<section class="section"><div class="container"><div class="section-heading"><span class="section-label">Our Trips</span><h2>Community-based experiences</h2></div>
+<section class="section"><div class="container"><div class="section-heading"><h2 class="section-label">Our Trips</h2><h3>Community-based experiences</h3></div>
 {% for exp in collections.experiences %}
 <div id="{{ exp.data.title | slugify }}" class="split{% if loop.index % 2 == 0 %} split--reverse{% endif %}" {% if not loop.last %}style="margin-bottom:var(--space-2xl);"{% endif %}><div class="split__image"><img src="{{ exp.data.image }}" alt="{{ exp.data.title }}"></div><div class="split__text"><span class="card__location">{{ exp.data.location }}</span><h3>{{ exp.data.title }}</h3>{{ exp.content | safe }}{% if exp.data.note %}<p class="text-muted" style="font-style:italic;margin-top:0.75rem;">{{ exp.data.note }}</p>{% endif %}<div class="trip-details">{% if exp.data.duration %}<span class="trip-details__item"><strong>Duration:</strong> {{ exp.data.duration }}</span>{% endif %}{% if exp.data.groupSize %}<span class="trip-details__item"><strong>Group size:</strong> {{ exp.data.groupSize }}</span>{% endif %}{% if exp.data.difficulty %}<span class="trip-details__item"><strong>Difficulty:</strong> {{ exp.data.difficulty }}</span>{% endif %}<span class="trip-details__item"><strong>Pricing:</strong> <a href="/contact/">Contact us</a></span></div><a href="/contact/" class="btn--text" style="margin-top: var(--space-sm); display: inline-block;">Inquire about this trip</a></div></div>
 {% endfor %}
@@ -14,8 +14,8 @@ showCta: false
   <div class="container">
     <div class="vol-section__inner">
       <div class="vol-section__header">
-        <span class="section-label">Volunteering</span>
-        <h2>Give back while you travel</h2>
+        <h2 class="section-label">Volunteering</h2>
+        <h3>Give back while you travel</h3>
         <p>We connect travelers with trusted, ethical volunteer opportunities across the region. These aren't staged experiences or feel-good photo ops. Volunteering through Mitria means working alongside local teams on projects they've designed and requested.</p>
       </div>
       <div class="vol-section__grid">
@@ -48,5 +48,5 @@ showCta: false
     </div>
   </div>
 </section>
-<section class="section itinerary-section"><div class="container"><div class="split"><div class="split__image"><img src="{{ pageSettings.itineraryImage }}" alt="Planning"></div><div class="split__text"><span class="section-label">Custom Itineraries</span><h2>{{ pageSettings.itineraryHeading }}</h2>{{ pageSettings.itineraryText | md | safe }}<a href="/contact/" class="btn--text">Start planning</a></div></div></div></section>
+<section class="section itinerary-section"><div class="container"><div class="split"><div class="split__image"><img src="{{ pageSettings.itineraryImage }}" alt="Planning"></div><div class="split__text"><h2 class="section-label">Custom Itineraries</h2><h3>{{ pageSettings.itineraryHeading }}</h3>{{ pageSettings.itineraryText | md | safe }}<a href="/contact/" class="btn--text">Start planning</a></div></div></div></section>
 <section class="cta-banner"><h2>Let's plan something meaningful</h2><a href="/contact/" class="btn btn--outline">Get in Touch</a></section>
