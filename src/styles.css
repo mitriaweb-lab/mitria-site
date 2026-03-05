@@ -216,7 +216,7 @@ p:last-child {
 }
 
 .btn--text::after {
-  content: ' Ã¢ÂÂ';
+  content: ' \2192';
 }
 
 .btn--text:hover {
