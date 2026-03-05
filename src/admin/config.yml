@@ -19,7 +19,7 @@ collections:
       - { label: "Summary", name: "summary", widget: "markdown", hint: "Short description for cards (1-2 sentences)" }
       - { label: "Note", name: "note", widget: "string", required: false, hint: "Optional italicized note (e.g. where proceeds go)" }
       - { label: "Duration", name: "duration", widget: "string", required: false, hint: "e.g. 2 days / 1 night" }
-      - { label: "Group Size", name: "groupSize", widget: "string", required: false, hint: "e.g. 2â8 people" }
+      - { label: "Group Size", name: "groupSize", widget: "string", required: false, hint: "e.g. 2Ã¢ÂÂ8 people" }
       - { label: "Difficulty", name: "difficulty", widget: "string", required: false, hint: "e.g. Easy, Moderate, Challenging" }
       - { label: "Display Order", name: "order", widget: "number", value_type: "int", default: 10 }
       - { label: "Full Description", name: "body", widget: "markdown" }
@@ -141,14 +141,14 @@ collections:
           - { label: "Volunteering Heading", name: "volHeading", widget: "string" }
           - { label: "Volunteering Text", name: "volText", widget: "markdown" }
           - { label: "Volunteering Image", name: "volImage", widget: "image" }
-        - label: "Hero Size"
-          name: "heroSize"
-          widget: "select"
-          options:
-            - { label: "Short (45vh)", value: "short" }
-            - { label: "Full (75vh)", value: "full" }
-            - { label: "Tall (92vh)", value: "tall" }
-          default: "full"
+          - label: "Hero Size"
+            name: "heroSize"
+            widget: "select"
+            options:
+              - { label: "Short (45vh)", value: "short" }
+              - { label: "Full (75vh)", value: "full" }
+              - { label: "Tall (92vh)", value: "tall" }
+            default: "full"
 
       - label: "About Page"
         name: "about"
@@ -172,14 +172,14 @@ collections:
           - { label: "Email", name: "email", widget: "string" }
           - { label: "Facebook URL", name: "facebook", widget: "string" }
           - { label: "Instagram URL", name: "instagram", widget: "string" }
-        - label: "Nav Bar Size"
-          name: "navSize"
-          widget: "select"
-          options:
-            - { label: "Compact (56px)", value: "compact" }
-            - { label: "Default (72px)", value: "default" }
-            - { label: "Large (88px)", value: "large" }
-          default: "default"
+          - label: "Nav Bar Size"
+            name: "navSize"
+            widget: "select"
+            options:
+              - { label: "Compact (56px)", value: "compact" }
+              - { label: "Default (72px)", value: "default" }
+              - { label: "Large (88px)", value: "large" }
+            default: "default"
 
       - label: "Friends & Partners"
         name: "partners"
@@ -203,48 +203,48 @@ collections:
           - { label: "Experiences Hero Image", name: "experiencesHero", widget: "image" }
           - { label: "Experiences Title", name: "experiencesTitle", widget: "string" }
           - { label: "Experiences Subtitle", name: "experiencesSubtitle", widget: "string" }
-        - label: "Experiences Hero Size"
-          name: "experiencesHeroSize"
-          widget: "select"
-          options:
-            - { label: "Short (45vh)", value: "short" }
-            - { label: "Full (75vh)", value: "full" }
-            - { label: "Tall (92vh)", value: "tall" }
-          default: "short"
+          - label: "Experiences Hero Size"
+            name: "experiencesHeroSize"
+            widget: "select"
+            options:
+              - { label: "Short (45vh)", value: "short" }
+              - { label: "Full (75vh)", value: "full" }
+              - { label: "Tall (92vh)", value: "tall" }
+            default: "short"
           - { label: "--- PROJECTS PAGE ---", name: "projDivider", widget: "hidden", default: "" }
           - { label: "Projects Hero Image", name: "projectsHero", widget: "image" }
           - { label: "Projects Title", name: "projectsTitle", widget: "string" }
           - { label: "Projects Subtitle", name: "projectsSubtitle", widget: "string" }
-        - label: "Projects Hero Size"
-          name: "projectsHeroSize"
-          widget: "select"
-          options:
-            - { label: "Short (45vh)", value: "short" }
-            - { label: "Full (75vh)", value: "full" }
-            - { label: "Tall (92vh)", value: "tall" }
-          default: "short"
+          - label: "Projects Hero Size"
+            name: "projectsHeroSize"
+            widget: "select"
+            options:
+              - { label: "Short (45vh)", value: "short" }
+              - { label: "Full (75vh)", value: "full" }
+              - { label: "Tall (92vh)", value: "tall" }
+            default: "short"
           - { label: "--- COUNTRIES PAGE ---", name: "countDivider", widget: "hidden", default: "" }
           - { label: "Countries Hero Image", name: "countriesHero", widget: "image" }
           - { label: "Countries Title", name: "countriesTitle", widget: "string" }
-        - label: "Countries Hero Size"
-          name: "countriesHeroSize"
-          widget: "select"
-          options:
-            - { label: "Short (45vh)", value: "short" }
-            - { label: "Full (75vh)", value: "full" }
-            - { label: "Tall (92vh)", value: "tall" }
-          default: "short"
+          - label: "Countries Hero Size"
+            name: "countriesHeroSize"
+            widget: "select"
+            options:
+              - { label: "Short (45vh)", value: "short" }
+              - { label: "Full (75vh)", value: "full" }
+              - { label: "Tall (92vh)", value: "tall" }
+            default: "short"
           - { label: "--- CONTACT PAGE ---", name: "contDivider", widget: "hidden", default: "" }
           - { label: "Contact Hero Image", name: "contactHero", widget: "image" }
           - { label: "Contact Title", name: "contactTitle", widget: "string" }
-        - label: "Contact Hero Size"
-          name: "contactHeroSize"
-          widget: "select"
-          options:
-            - { label: "Short (45vh)", value: "short" }
-            - { label: "Full (75vh)", value: "full" }
-            - { label: "Tall (92vh)", value: "tall" }
-          default: "short"
+          - label: "Contact Hero Size"
+            name: "contactHeroSize"
+            widget: "select"
+            options:
+              - { label: "Short (45vh)", value: "short" }
+              - { label: "Full (75vh)", value: "full" }
+              - { label: "Tall (92vh)", value: "tall" }
+            default: "short"
           - { label: "Contact Intro Text", name: "contactIntro", widget: "markdown" }
           - { label: "Contact Form Options (comma-separated)", name: "contactFormOptions", widget: "string", hint: "Comma-separated list of dropdown options" }
           - { label: "--- EXPERIENCES BOTTOM SECTION ---", name: "itinDivider", widget: "hidden", default: "" }
@@ -253,11 +253,11 @@ collections:
           - { label: "Itinerary Section Image", name: "itineraryImage", widget: "image" }
           - { label: "--- ABOUT PAGE ---", name: "aboutDivider", widget: "hidden", default: "" }
           - { label: "How We Work Image", name: "aboutHowWeWorkImage", widget: "image" }
-        - label: "About Hero Size"
-          name: "aboutHeroSize"
-          widget: "select"
-          options:
-            - { label: "Short (45vh)", value: "short" }
-            - { label: "Full (75vh)", value: "full" }
-            - { label: "Tall (92vh)", value: "tall" }
-          default: "short"
+          - label: "About Hero Size"
+            name: "aboutHeroSize"
+            widget: "select"
+            options:
+              - { label: "Short (45vh)", value: "short" }
+              - { label: "Full (75vh)", value: "full" }
+              - { label: "Tall (92vh)", value: "tall" }
+            default: "short"
