@@ -767,18 +767,21 @@ p:last-child {
    ============================================ */
 .season-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: var(--space-sm);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-md);
 }
 
 .season-card {
   background: var(--color-white);
-  padding: var(--space-md) var(--space-md);
+  padding: var(--space-lg) var(--space-md);
   border-radius: var(--border-radius);
   border: 1px solid var(--color-border);
   text-align: center;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
   cursor: default;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .season-card:hover,
@@ -794,23 +797,28 @@ p:last-child {
   justify-content: center;
   width: 48px;
   height: 48px;
-  margin: 0 auto var(--space-xs);
+  margin: 0 auto var(--space-sm);
   border-radius: 50%;
   background: var(--color-sage-light);
   color: var(--color-primary-dark);
+  flex-shrink: 0;
 }
 
 .season-card h4 {
   color: var(--color-primary-dark);
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.75rem;
   font-family: var(--font-heading);
-  font-size: 0.95rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.3;
 }
 
 .season-card p {
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   color: var(--color-text-light);
-  line-height: 1.6;
+  line-height: 1.65;
+  max-width: 280px;
+  margin: 0 auto;
 }
 
 /* Travel tips callout */
@@ -1089,15 +1097,15 @@ p:last-child {
 }
 
 .exp-card__title {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   margin-bottom: 0.5rem;
   line-height: 1.3;
 }
 
 .exp-card__summary {
   color: var(--color-text-light);
-  font-size: 0.88rem;
-  line-height: 1.6;
+  font-size: 0.92rem;
+  line-height: 1.65;
   flex: 1;
 }
 
