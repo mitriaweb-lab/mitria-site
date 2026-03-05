@@ -1,5 +1,5 @@
 /* ============================================
-   MITRIA — Global Styles
+   MITRIA â Global Styles
    ============================================ */
 
 /* --- Reset & Base --- */
@@ -10,6 +10,9 @@
 }
 
 :root {
+  /* Nav & layout */
+  --nav-height: 72px;
+
   /* Brand palette */
   --color-fog: #F5F3EE;
   --color-golden-hour: #D4A024;
@@ -213,7 +216,7 @@ p:last-child {
 }
 
 .btn--text::after {
-  content: ' →';
+  content: ' â';
 }
 
 .btn--text:hover {
@@ -245,7 +248,7 @@ p:last-child {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
+  height: var(--nav-height);
 }
 
 .nav__logo {
@@ -357,7 +360,7 @@ p:last-child {
   align-items: flex-end;
   justify-content: flex-start;
   overflow: hidden;
-  margin-top: 72px;
+  margin-top: var(--nav-height);
   background: #2c3a2e;
 }
 
@@ -365,6 +368,11 @@ p:last-child {
   height: 45vh;
   min-height: 320px;
   max-height: 450px;
+}
+.hero--tall {
+  height: 92vh;
+  min-height: 600px;
+  max-height: 1000px;
 }
 
 .hero__image {
@@ -1576,7 +1584,7 @@ p:last-child {
 
 /* Spacing helper for page body below hero */
 .page-body {
-  margin-top: 72px;
+  margin-top: var(--nav-height);
 }
 
 /* ============================================
