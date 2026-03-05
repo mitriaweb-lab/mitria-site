@@ -1,5 +1,5 @@
 /* ============================================
-   MITRIA ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Global Styles
+   MITRIA ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Global Styles
    ============================================ */
 
 /* --- Reset & Base --- */
@@ -138,7 +138,7 @@ p:last-child {
 
 .section-label {
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: 1.125rem;
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -1759,6 +1759,7 @@ p:last-child {
 }
 
 .blog-card__body .section-label {
+  font-size: 0.8rem;
   margin-bottom: 0.3rem;
 }
 
@@ -2019,5 +2020,11 @@ p:last-child {
   .contact-social {
     flex-direction: column;
     gap: var(--space-sm);
+  }
+}
+
+@media (max-width: 600px) {
+  .section-label {
+    font-size: 0.95rem;
   }
 }
