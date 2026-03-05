@@ -1,5 +1,5 @@
 /* ============================================
-   MITRIA ÃÂ¢ÃÂÃÂ Global Styles
+   MITRIA ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ Global Styles
    ============================================ */
 
 /* --- Reset & Base --- */
@@ -911,13 +911,26 @@ p:last-child {
 .quick-facts__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-md);
+  gap: 0;
+  transform: scale(1.1);
 }
 
 .quick-facts__item {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  padding: var(--space-md) var(--space-lg);
+}
+
+/* Internal cross-hair dividers: no outer border */
+.quick-facts__item:nth-child(1),
+.quick-facts__item:nth-child(2) {
+  border-bottom: 1px solid var(--color-border, #d4c9b8);
+}
+
+.quick-facts__item:nth-child(1),
+.quick-facts__item:nth-child(3) {
+  border-right: 1px solid var(--color-border, #d4c9b8);
 }
 
 .quick-facts__item svg {
@@ -949,10 +962,22 @@ p:last-child {
 @media (max-width: 480px) {
   .quick-facts__grid {
     grid-template-columns: 1fr;
+    transform: scale(1);
   }
 
   .quick-facts__item {
     justify-content: center;
+    border-right: none !important;
+  }
+
+  .quick-facts__item:nth-child(1),
+  .quick-facts__item:nth-child(2),
+  .quick-facts__item:nth-child(3) {
+    border-bottom: 1px solid var(--color-border, #d4c9b8);
+  }
+
+  .quick-facts__item:nth-child(4) {
+    border-bottom: none;
   }
 }
 
