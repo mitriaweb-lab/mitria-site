@@ -19,7 +19,7 @@ collections:
       - { label: "Summary", name: "summary", widget: "markdown", hint: "Short description for cards (1-2 sentences)" }
       - { label: "Note", name: "note", widget: "string", required: false, hint: "Optional italicized note (e.g. where proceeds go)" }
       - { label: "Duration", name: "duration", widget: "string", required: false, hint: "e.g. 2 days / 1 night" }
-      - { label: "Group Size", name: "groupSize", widget: "string", required: false, hint: "e.g. 2Ã¢ÂÂ8 people" }
+      - { label: "Group Size", name: "groupSize", widget: "string", required: false, hint: "e.g. 2ÃÂ¢ÃÂÃÂ8 people" }
       - { label: "Difficulty", name: "difficulty", widget: "string", required: false, hint: "e.g. Easy, Moderate, Challenging" }
       - { label: "Display Order", name: "order", widget: "number", value_type: "int", default: 10 }
       - { label: "Full Description", name: "body", widget: "markdown" }
@@ -180,6 +180,26 @@ collections:
               - { label: "Default (72px)", value: "default" }
               - { label: "Large (88px)", value: "large" }
             default: "default"
+          - label: "Color Palette"
+            name: "colors"
+            widget: "object"
+            required: false
+            collapsed: true
+            fields:
+              - { label: "Background", name: "bg", widget: "color", required: false, hint: "Main page background (default: #F5F3EE)" }
+              - { label: "Background Alt", name: "bgAlt", widget: "color", required: false, hint: "Alternate section background (default: #ECE9E2)" }
+              - { label: "Heading Text", name: "textHeading", widget: "color", required: false, hint: "Heading/title color (default: #2E2E2B)" }
+              - { label: "Body Text", name: "text", widget: "color", required: false, hint: "Main body text (default: #2E2E2B)" }
+              - { label: "Secondary Text", name: "textLight", widget: "color", required: false, hint: "Lighter body text (default: #5A5750)" }
+              - { label: "Primary / Accent", name: "primary", widget: "color", required: false, hint: "Section labels, buttons, links (default: #5E7E5A)" }
+              - { label: "Primary Dark", name: "primaryDark", widget: "color", required: false, hint: "Hover states, dark accents (default: #1E3A20)" }
+              - { label: "Accent / Gold", name: "accent", widget: "color", required: false, hint: "Gold accent color (default: #D4A024)" }
+              - { label: "Warm / Clay", name: "warm", widget: "color", required: false, hint: "Warm accent color (default: #C07A4A)" }
+              - { label: "Nav Background", name: "navBg", widget: "color", required: false, hint: "Navigation bar background (default: white)" }
+              - { label: "Nav Text", name: "navText", widget: "color", required: false, hint: "Navigation link color (default: #2E2E2B)" }
+              - { label: "Footer Background", name: "footerBg", widget: "color", required: false, hint: "Footer background (default: #1E3A20)" }
+              - { label: "Footer Text", name: "footerText", widget: "color", required: false, hint: "Footer text color (default: rgba(255,255,255,0.7))" }
+              - { label: "Card Border", name: "border", widget: "color", required: false, hint: "Card/divider border color (default: #D8D4CB)" }
 
       - label: "Friends & Partners"
         name: "partners"
