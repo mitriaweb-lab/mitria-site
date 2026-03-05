@@ -1,5 +1,5 @@
 /* ============================================
-   MITRIA ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ Global Styles
+   MITRIA ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Global Styles
    ============================================ */
 
 /* --- Reset & Base --- */
@@ -853,7 +853,7 @@ p:last-child {
 .country-intro__split {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--space-xl);
+  gap: var(--space-md);
   align-items: center;
 }
 
