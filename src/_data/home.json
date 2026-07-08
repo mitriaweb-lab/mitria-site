@@ -1,14 +1,14 @@
 {
   "volText": "We connect travelers with trusted, ethical volunteer opportunities across Asia. From community infrastructure to conservation, we match you with organizations that produce measurable outcomes rather than feel-good photo ops.",
-  "heroImage": "/images/nattawat-muangmoon-5ua863sj9ge-unsplash.jpg",
-  "volImage": "/images/img_8375.jpg",
-  "aboutImage": "/images/matthijs-van-dis-d4_k74r9ivm-unsplash.jpg",
+  "heroImage": "/images/01000529_snapseedcopy.jpg",
+  "volImage": "/images/01011620.jpg",
+  "aboutImage": "/images/01000568.jpg",
   "volHeading": "Give back while you travel",
   "heroSubtitle": "Custom journeys and community-led projects across South and Southeast Asia.",
   "aboutHeading": "Built on genuine connections",
   "aboutText1": "We're a small-scale travel company tired of mass-tourism. We believe travel should feel personal, respectful, and constructive. Every journey with us is custom-tailored and over 80% of our profits are reinvested into community-led projects.",
   "aboutText2": "We're committed to ending exploitative practices like elephant riding and poverty tourism. Your money has an impact even after your trip is finished.",
+  "heroSize": "full",
   "description": "Mitria is a small-scale travel company built on genuine connections with communities across South and Southeast Asia.",
-  "heroTitle": "Travel with purpose.",
-  "heroSize": "full"
+  "heroTitle": "Travel with purpose."
 }
